@@ -1,5 +1,7 @@
 "use client";
 
+import { motion } from 'framer-motion';
+
 const features = [
   {
     icon: <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -61,8 +63,20 @@ const features = [
 
 function WhyChooseUs() {
   return (
-    <div className="w-full bg-[#2a2a2a] px-14 py-24">
-      <div className="flex flex-col items-center text-center mb-16">
+    <motion.div 
+      className="w-full bg-[#2a2a2a] px-14 py-24"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.6 }}
+    >
+      <motion.div 
+        className="flex flex-col items-center text-center mb-16"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
         <div className="flex items-center gap-3 mb-6">
           <div className="bg-white h-[1.7px] w-10" />
           <div className="bg-[#E1AD56] h-2 w-2 rounded-full" />
@@ -72,24 +86,37 @@ function WhyChooseUs() {
           Six reasons why discerning homeowners trust us with their most
           important spaces.
         </p>
-      </div>
+      </motion.div>
 
       <div className="grid grid-cols-3 gap-6">
         {features.map((feature, i) => {
           return (
-            <div key={i} className="bg-[#3a3a3a] rounded p-8 flex flex-col gap-4">
-              <div className="text-[#E1AD56]">{feature.icon}</div>
+            <motion.div 
+              key={i} 
+              className="bg-[#3a3a3a] rounded p-8 flex flex-col gap-4"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 + (i * 0.1) }}
+              whileHover={{ y: -8, backgroundColor: '#444444' }}
+            >
+              <motion.div 
+                className="text-[#E1AD56]"
+                whileHover={{ scale: 1.1 }}
+              >
+                {feature.icon}
+              </motion.div>
               <h3 className="font-serif text-white text-[20px]">
                 {feature.title}
               </h3>
               <p className="text-gray-300 text-[14px] leading-relaxed">
                 {feature.description}
               </p>
-            </div>
+            </motion.div>
           );
         })}
       </div>
-    </div>
+    </motion.div>
   );
 }
 

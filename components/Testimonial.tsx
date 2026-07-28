@@ -1,6 +1,7 @@
 "use client";
 
 import { FaQuoteRight } from "react-icons/fa6";
+import { motion } from 'framer-motion';
 
 const testimonials = [
   {
@@ -21,8 +22,20 @@ const testimonials = [
 
 function Testimonials() {
   return (
-    <div className="w-full bg-[#F7F4EF] px-14 py-24">
-      <div className="flex flex-col items-center text-center mb-16">
+    <motion.div 
+      className="w-full bg-[#F7F4EF] px-14 py-24"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.6 }}
+    >
+      <motion.div 
+        className="flex flex-col items-center text-center mb-16"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
         <div className="flex items-center gap-3 mb-6">
           <div className="bg-[#E1AD56] h-[1.7px] w-10" />
           <div className="bg-[#E1AD56] h-2 w-2 rounded-full" />
@@ -30,24 +43,40 @@ function Testimonials() {
         <h2 className="font-serif text-[#1f1f1f] text-[46px]">
           What Our Clients Say
         </h2>
-      </div>
+      </motion.div>
 
       <div className="grid grid-cols-2 gap-8 max-w-5xl mx-auto">
         {testimonials.map((testimonial, i) => (
-          <div
+          <motion.div
             key={i}
             className="relative bg-white shadow-sm p-10 flex flex-col gap-6"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 + (i * 0.15) }}
+            whileHover={{ y: -8 }}
           >
-            <FaQuoteRight className="absolute top-6 right-8 text-[#E1AD56]/40" size={36} />
+            <motion.div
+              className="absolute top-6 right-8 text-[#E1AD56]/40"
+              initial={{ rotate: 0 }}
+              whileInView={{ rotate: 10 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.4 + (i * 0.15) }}
+            >
+              <FaQuoteRight size={36} />
+            </motion.div>
 
             <p className="font-serif italic text-[#1f1f1f] text-[19px] py-8 leading-relaxed">
               &quot;{testimonial.quote}&quot;
             </p>
 
             <div className="flex items-center gap-3">
-              <div className="w-11 h-11 rounded-full bg-[#e5ded2] flex items-center justify-center text-[#1f1f1f] font-semibold">
+              <motion.div 
+                className="w-11 h-11 rounded-full bg-[#e5ded2] flex items-center justify-center text-[#1f1f1f] font-semibold"
+                whileHover={{ scale: 1.1, rotate: 5 }}
+              >
                 {testimonial.initial}
-              </div>
+              </motion.div>
               <div>
                 <p className="font-semibold text-[#1f1f1f] text-[15px]">
                   {testimonial.name}
@@ -57,10 +86,10 @@ function Testimonials() {
                 </p>
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 }
 

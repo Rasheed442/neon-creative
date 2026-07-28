@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Header from "@/components/Header";
 import { heroImages } from "@/contants";
 import Hero from "@/components/Hero";
@@ -14,12 +14,38 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   const [current, setCurrent] = useState(0);
+  const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
-  const handleNext = () =>
+  const handleNext = () => {
     setCurrent((prev) => (prev + 1) % heroImages.length);
+    resetAutoPlay();
+  };
 
-  const handlePrev = () =>
+  const handlePrev = () => {
     setCurrent((prev) => (prev - 1 + heroImages.length) % heroImages.length);
+    resetAutoPlay();
+  };
+
+  const resetAutoPlay = () => {
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+    }
+    intervalRef.current = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % heroImages.length);
+    }, 5000);
+  };
+
+  useEffect(() => {
+    intervalRef.current = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % heroImages.length);
+    }, 5000);
+
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+      }
+    };
+  }, []);
 
   return (
     <div>
