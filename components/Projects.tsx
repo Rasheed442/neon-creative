@@ -104,7 +104,7 @@ function FeaturedProjects() {
           transition={{ duration: 0.4 }}
           className="flex flex-col items-center justify-center text-center py-20 md:py-28 rounded"
         >
-          <FaBoxOpen className="text-gray-300 mb-4" size={40} />
+          <FaBoxOpen className="text-gray-300 mb-4 animate-bounce" size={60} />
           <p className="font-serif text-[#1f1f1f] text-[20px] md:text-[24px]">
             No projects yet in {activeCategory}
           </p>
