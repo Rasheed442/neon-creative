@@ -25,7 +25,7 @@ function Header() {
   }, [isMenuOpen]);
 
   return (
-    <div className='w-full sticky top-0 z-50 bg-gradient-to-r from-[#2a2a2a]/90 via-[#2a2a2a]/90 to-[#4a4a4a]/90 backdrop-blur-sm flex justify-between items-center px-4 md:px-14 py-3 md:py-4 shadow-lg'>
+    <div className='w-full sticky top-0 z-50 bg-gradient-to-r from-[#2a2a2a]/5 via-[#2a2a2a]/5 to-[#4a4a4a]/5 backdrop-blur-sm flex justify-between items-center px-4 md:px-14 py-3 md:py-4 shadow-lg'>
       <div className='flex items-center gap-2 min-w-0'>
         <Image
           src={logo}

@@ -66,10 +66,18 @@ export default function Home() {
           <Hero onNext={handleNext} onPrev={handlePrev} />
         </div>
       </div>
-      <About />
-      <WhatWeCreate/>
-      <FeaturedProjects />  
-      <WhyChooseUs/>
+      <div id="about">
+        <About />
+      </div>
+      <div id="services">
+        <WhatWeCreate/>
+      </div>
+      <div id="projects">
+        <FeaturedProjects />  
+      </div>
+      <div id="process">
+        <WhyChooseUs/>
+      </div>
       <Testimonials/>
       <CallToAction/>
       <Footer/>
