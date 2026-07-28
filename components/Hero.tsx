@@ -55,7 +55,7 @@ function Hero({ onNext, onPrev }: HeroProps) {
 
       {/* Carousel arrows */}
       <motion.div 
-        className='absolute bottom-16 right-4 md:right-12 flex items-center gap-3'
+        className='absolute bottom-16 right-4 hidden md:block md:right-12 md:flex md:items-center md:gap-3'
         initial={{ opacity: 0, x: 50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ delay: 1, duration: 0.6 }}
