@@ -64,36 +64,36 @@ const features = [
 function WhyChooseUs() {
   return (
     <motion.div 
-      className="w-full bg-[#2a2a2a] px-14 py-24"
+      className="w-full bg-[#2a2a2a] px-4 md:px-14 py-12 md:py-24"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.6 }}
     >
       <motion.div 
-        className="flex flex-col items-center text-center mb-16"
+        className="flex flex-col items-center text-center mb-8 md:mb-16"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <div className="flex items-center gap-3 mb-6">
+        <div className="flex items-center gap-3 mb-4 md:mb-6">
           <div className="bg-white h-[1.7px] w-10" />
           <div className="bg-[#E1AD56] h-2 w-2 rounded-full" />
         </div>
-        <h2 className="font-serif text-white text-[46px]">Why Choose Us</h2>
-        <p className="text-gray-300 text-[16px] mt-4 max-w-xl">
+        <h2 className="font-serif text-white text-[32px] md:text-[40px] lg:text-[46px]">Why Choose Us</h2>
+        <p className="text-gray-300 text-[14px] md:text-[16px] mt-4 max-w-xl px-4">
           Six reasons why discerning homeowners trust us with their most
           important spaces.
         </p>
       </motion.div>
 
-      <div className="grid grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
         {features.map((feature, i) => {
           return (
             <motion.div 
               key={i} 
-              className="bg-[#3a3a3a] rounded p-8 flex flex-col gap-4"
+              className="bg-[#3a3a3a] rounded p-6 md:p-8 flex flex-col gap-4"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -106,10 +106,10 @@ function WhyChooseUs() {
               >
                 {feature.icon}
               </motion.div>
-              <h3 className="font-serif text-white text-[20px]">
+              <h3 className="font-serif text-white text-[16px] md:text-[18px] lg:text-[20px]">
                 {feature.title}
               </h3>
-              <p className="text-gray-300 text-[14px] leading-relaxed">
+              <p className="text-gray-300 text-[12px] md:text-[13px] lg:text-[14px] leading-relaxed">
                 {feature.description}
               </p>
             </motion.div>

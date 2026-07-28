@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 function CallToAction() {
   return (
     <motion.div
-      className="relative w-full h-[600px] bg-cover bg-center flex items-center justify-center"
+      className="relative w-full h-[400px] md:h-[500px] lg:h-[600px] bg-cover bg-center flex items-center justify-center"
       style={{ backgroundImage: `url(${ctabg.src})` }}
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
@@ -23,14 +23,14 @@ function CallToAction() {
       />
 
       <motion.div 
-        className="relative z-10 flex flex-col items-center text-center px-6"
+        className="relative z-10 flex flex-col items-center text-center px-4 md:px-6"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.2 }}
       >
         <motion.div 
-          className="flex items-center gap-3 mb-6"
+          className="flex items-center gap-3 mb-4 md:mb-6"
           initial={{ opacity: 0, width: 0 }}
           whileInView={{ opacity: 1, width: 'auto' }}
           viewport={{ once: true }}
@@ -41,7 +41,7 @@ function CallToAction() {
         </motion.div>
 
         <motion.h2 
-          className="font-serif text-white text-[46px]"
+          className="font-serif text-white text-[28px] md:text-[36px] lg:text-[46px] px-4"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -51,7 +51,7 @@ function CallToAction() {
         </motion.h2>
 
         <motion.p 
-          className="text-gray-200 text-[17px] font-light mt-4 max-w-xl"
+          className="text-gray-200 text-[14px] md:text-[15px] lg:text-[17px] font-light mt-4 max-w-xl px-4"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -62,7 +62,7 @@ function CallToAction() {
         </motion.p>
 
         <motion.button 
-          className="mt-8 bg-[#E1AD56] text-white px-8 py-4 rounded-sm font-medium flex items-center gap-2"
+          className="mt-6 md:mt-8 bg-[#E1AD56] text-white px-6 md:px-8 py-3 md:py-4 rounded-sm font-medium flex items-center gap-2"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
