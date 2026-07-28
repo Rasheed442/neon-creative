@@ -9,6 +9,7 @@ import {
   modkitchen,
 } from "@/contants";
 import { motion, AnimatePresence } from 'framer-motion';
+import { FaBoxOpen } from 'react-icons/fa6';
 
 const categories = [
   "All",
@@ -95,36 +96,56 @@ function FeaturedProjects() {
         })}
       </motion.div>
 
-      {/* Grid */}
-      <motion.div 
-        className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8"
-        layout
-      >
-        <AnimatePresence mode="popLayout">
-          {filteredProjects.map((project, i) => (
-            <motion.div
-              key={project.label}
-              layout
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.9 }}
-              transition={{ duration: 0.4, delay: i * 0.1 }}
-              className="relative w-full h-[300px] md:h-[420px] overflow-hidden group cursor-pointer"
-              whileHover={{ scale: 1.02 }}
-            >
-              <Image
-                src={project.image}
-                alt={project.label}
-                fill
-                className="object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-              <div className="absolute inset-x-0 bottom-0 h-12 bg-black/10 backdrop-blur-sm flex items-center justify-center">
-                <p className="text-white font-sans text-[13px] md:text-[15px] font-medium">{project.label}</p>
-              </div>
-            </motion.div>
-          ))}
-        </AnimatePresence>
-      </motion.div>
+      {/* Grid or Empty State */}
+      {filteredProjects.length === 0 ? (
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4 }}
+          className="flex flex-col items-center justify-center text-center py-20 md:py-28 rounded"
+        >
+          <FaBoxOpen className="text-gray-300 mb-4" size={40} />
+          <p className="font-serif text-[#1f1f1f] text-[20px] md:text-[24px]">
+            No projects yet in {activeCategory}
+          </p>
+          <p className="text-gray-500 text-[14px] md:text-[15px] mt-2 max-w-xs">
+            We&apos;re still adding pieces to this collection — check back soon
+            or explore another category.
+          </p>
+        </motion.div>
+      ) : (
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8"
+          layout
+        >
+          <AnimatePresence mode="popLayout">
+            {filteredProjects.map((project, i) => (
+              <motion.div
+                key={project.label}
+                layout
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.9 }}
+                transition={{ duration: 0.4, delay: i * 0.1 }}
+                className="relative w-full h-[300px] md:h-[420px] overflow-hidden group cursor-pointer"
+                whileHover={{ scale: 1.02 }}
+              >
+                <Image
+                  src={project.image}
+                  alt={project.label}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-x-0 bottom-0 h-12 bg-black/10 backdrop-blur-sm flex items-center justify-center">
+                  <p className="text-white font-sans text-[13px] md:text-[15px] font-medium">
+                    {project.label}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </AnimatePresence>
+        </motion.div>
+      )}
     </motion.div>
   );
 }
