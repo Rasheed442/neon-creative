@@ -24,7 +24,7 @@ const categories = [
 const projects = [
   { image: bedroom, label: "Bedrooms", category: "Bedrooms" },
   { image: modkitchen, label: "Mordern Kitchen", category: "Modern Kitchens" },
-  { image: dining, label: "Mordern Dining", category: "Modern Kitchens" },
+  { image: dining, label: "Home Finishing", category: "Modern Kitchens" },
   { image: livingromm, label: "Living Rooms", category: "Living Rooms" },
 ];
 

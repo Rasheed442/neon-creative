@@ -18,13 +18,13 @@ const services = [
   },
   {
     image: Ceiling,
-    title: "Ceiling & Lighting",
-    description: "Custom ceiling designs with integrated lighting for every space.",
+    title: "Home Finishing",
+    description: "Interior woodworks, TV consoles, shelving, wall panels, & bespoke furniture.",
   },
   {
     image: Stone,
-    title: "Stone & Surfaces",
-    description: "Premium countertops, marble, and surface finishing for a lasting impression.",
+    title: "Interior Consultation",
+    description: "Design consultation, space planning, material selection, and project guidance.",
   },
 ];
 

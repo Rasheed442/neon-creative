@@ -15,7 +15,7 @@ function CallToAction() {
       transition={{ duration: 0.8 }}
     >
       <motion.div 
-        className="absolute inset-0 bg-black/55"
+        className="absolute inset-0 bg-black/20"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
