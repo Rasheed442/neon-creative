@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import Image from "next/image";
 import Header from "@/components/Header";
 import { heroImages } from "@/contants";
 import Hero from "@/components/Hero";
@@ -51,14 +52,30 @@ export default function Home() {
     <div>
       <div className="min-h-screen relative">
         {/* Background image layer */}
-        <div
-          className="absolute inset-0 bg-cover bg-center transition-all duration-700"
-          style={{ backgroundImage: `url(${heroImages[current].src})` }}
-        />
+   {/* Background image layer */}
+<div className="absolute inset-0">
+  {heroImages.map((img, index) => {
+    const isNeighbor =
+      index === current ||
+      index === (current + 1) % heroImages.length ||
+      index === (current - 1 + heroImages.length) % heroImages.length;
 
-        {/* Overlays */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-black/20 to-black/20" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
+    if (!isNeighbor) return null;
+
+    return (
+      <Image
+        key={img.src ?? index}
+        src={img}
+        alt="Hero background"
+        fill
+        priority={index === 0}
+        className={`object-cover absolute inset-0 transition-opacity duration-700 ease-in-out ${
+          index === current ? "opacity-100" : "opacity-0"
+        }`}
+      />
+    );
+  })}
+</div>
 
         {/* Content */}
         <div className="relative z-10">
