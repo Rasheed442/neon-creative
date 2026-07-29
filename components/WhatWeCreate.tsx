@@ -30,7 +30,15 @@ const services = [
 
 function WhatWeCreate() {
   return (
-    <motion.div 
+    <div>
+       <video
+                    src={"/videos/gifv.mp4"}
+                    className="w-full h-full object-cover"
+                    controls
+                    muted
+                    autoPlay
+                  />
+        <motion.div 
       className="w-full bg-[#2a2a2a] px-4 md:px-14 py-12 md:py-24"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
@@ -95,6 +103,8 @@ function WhatWeCreate() {
         ))}
       </div>
     </motion.div>
+    </div>
+  
   );
 }
 
