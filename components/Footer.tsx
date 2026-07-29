@@ -13,7 +13,13 @@ import {
 import { logo } from "@/contants";
 import { motion } from 'framer-motion';
 
-const quickLinks = ["About", "Services", "Projects", "Process", "Contact"];
+const quickLinks = [
+  { name: "About", href: "#about" },
+  { name: "Services", href: "#services" },
+  { name: "Projects", href: "#projects" },
+  { name: "Process", href: "#process" },
+  { name: "Contact", href: "#contact" },
+];
 
 function Footer() {
   return (
@@ -63,17 +69,17 @@ function Footer() {
           <div className="flex flex-col gap-3">
             {quickLinks.map((link, i) => (
               <motion.div
-                key={link}
+                key={link.name}
                 initial={{ opacity: 0, x: -10 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: 0.3 + (i * 0.05) }}
               >
                 <Link
-                  href="#"
+                  href={link.href}
                   className="text-gray-400 text-[13px] md:text-[15px] hover:text-white transition-colors"
                 >
-                  {link}
+                  {link.name}
                 </Link>
               </motion.div>
             ))}
