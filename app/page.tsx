@@ -69,7 +69,7 @@ export default function Home() {
         alt="Hero background"
         fill
         priority={index === 0}
-        className={`object-cover absolute inset-0 transition-opacity duration-700 ease-in-out ${
+        className={` absolute inset-0 transition-opacity duration-700 ease-in-out ${
           index === current ? "opacity-100" : "opacity-0"
         }`}
       />

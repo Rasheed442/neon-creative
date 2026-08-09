@@ -47,13 +47,13 @@ function About() {
 
                 {/* Left: Image with floating badge */}
                 <motion.div 
-                    className="relative w-full md:w-[45%] order-2 md:order-1"
+                    className="relative w-full md:w-[70%] order-2 md:order-1"
                     initial={{ opacity: 0, x: -50 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8, delay: 0.2 }}
                 >
-                    <div className="relative w-full h-[400px] md:h-[560px] rounded-sm overflow-hidden">
+                    <div className="relative w-full  h-[400px] md:h-[760px] rounded-sm overflow-hidden">
                         <Image
                             src={about}
                             alt="Neon Creative Design kitchen"
@@ -78,7 +78,7 @@ function About() {
 
                 {/* Right: Content */}
                 <motion.div 
-                    className="w-full md:w-[55%] flex flex-col gap-4 md:gap-6 order-1 md:order-2"
+                    className="w-full md:w-[55%] flex flex-col gap-4 md:gap-4 order-1 md:order-2"
                     initial={{ opacity: 0, x: 50 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
@@ -96,7 +96,7 @@ function About() {
                     </motion.div>
 
                     <motion.h2 
-                        className="font-serif text-[#1f1f1f] text-[32px] md:text-[42px] lg:text-[52px] leading-tight"
+                        className="font-serif text-[#1f1f1f] text-[32px] md:text-[42px] lg:text-[48px] leading-tight"
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
@@ -106,7 +106,7 @@ function About() {
                     </motion.h2>
 
                     <motion.p 
-                        className="text-gray-600 font-light text-[14px] md:text-[15px] lg:text-[17px] leading-relaxed"
+                        className="text-gray-600 font-light text-[14px] md:text-[15px] lg:text-[16px] leading-relaxed"
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
@@ -117,7 +117,7 @@ function About() {
                         with functionality.
                     </motion.p>
                     <motion.p 
-                        className="text-gray-600 font-light text-[14px] md:text-[15px] lg:text-[17px] leading-relaxed"
+                        className="text-gray-600 font-light text-[14px] md:text-[15px] lg:text-[16px] leading-relaxed"
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
@@ -129,7 +129,7 @@ function About() {
                     </motion.p>
 
                     <motion.div 
-                        className="grid grid-cols-2 gap-x-6 md:gap-x-12 gap-y-6 md:gap-y-8 mt-4"
+                        className="grid grid-cols-2 gap-x-6 md:gap-x-12 gap-y-6 md:gap-y-8 mt-2"
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         viewport={{ once: true }}
@@ -146,7 +146,7 @@ function About() {
                             >
                                 <div className="bg-[#E1AD56] w-[2px] self-stretch" />
                                 <div>
-                                    <p className="text-[20px] md:text-[26px] font-semibold text-[#2E2E2E]">
+                                    <p className="text-[20px] md:text-[24px] font-semibold text-[#2E2E2E]">
                                         {stat.value}
                                     </p>
                                     <p className="text-[#2E2E2E] font-light text-[12px] md:text-[15px]">{stat.label}</p>

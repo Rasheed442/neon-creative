@@ -4,6 +4,7 @@ import herobg2 from "../assets/Images/herobg2.png"
 import herobg3 from "../assets/Images/herobg3.png"
 import herobg4 from "../assets/Images/herobg4.png"
 import herobg5 from "../assets/Images/herobg5.png"
+import herobg6 from "../assets/Images/herobg6.png"
 import about from "../assets/Images/about.png"
 import ctabg from "../assets/Images/ctabg.png"
 // what we offer
@@ -21,5 +22,5 @@ import livingromm from "../assets/Images/Projects/livingromm.png"
 import modkitchen from "../assets/Images/Projects/dining.png"
 
 
-export const heroImages = [herobg1, herobg2, herobg3, herobg4,herobg5];
+export const heroImages = [herobg1, herobg2, herobg3, herobg4,herobg5,herobg6];
 export { logo,about, Kitchen, Wardrobe, Ceiling, Stone, bedroom, dining, livingromm, modkitchen,ctabg }
