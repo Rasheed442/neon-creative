@@ -13,7 +13,8 @@ const stats = [
 
 function About() {
     return (
-        <motion.div
+        <div>
+ <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true, margin: "-100px" }}
@@ -157,6 +158,42 @@ function About() {
                 </motion.div>
             </motion.div>
         </motion.div>
+        <div className="bg-[#EAE3D6] p-4 md:p-10 flex flex-col justify-center items-center">
+              <motion.div 
+                        className="flex items-center gap-3"
+                        initial={{ opacity: 0, width: 0 }}
+                        whileInView={{ opacity: 1, width: 'auto' }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6, delay: 0.4 }}
+                    >
+                        <div className="bg-[#E1AD56] h-[1.7px] w-10" />
+                        <div className="bg-[#E1AD56] h-2 w-2 rounded-full" />
+                    </motion.div>
+
+<div className="py-6 flex flex-col items-center">
+      <motion.h2 
+                        className="font-serif text-[#1f1f1f] text-[32px] text-center md:text-[42px] lg:text-[48px] leading-tight"
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6, delay: 0.5 }}
+                    >
+                       See Our Craftsmanship in Motion
+                    </motion.h2>
+                    <p className="text-gray-600 font-light text-[14px] w-full md:w-[70%] text-center md:text-[14px] lg:text-[14px] leading-relaxed">Watch a selection of our completed cabinetry projects and discover the precision, quality, and attention 
+                        to detail that go into every custom piece we create.</p>
+</div>
+                  
+                     <video
+                    src={"/videos/gifv.mp4"}
+                    className="w-full h-full object-cover"
+                    controls
+                    muted
+                    autoPlay
+                  />
+        </div>
+        </div>
+       
 
     );
 }
