@@ -117,7 +117,7 @@ const projects = [
 
   return (
     <div>
-           <div className="h-[80vh] relative">
+           <div className="h-[70vh] sm:h-[75vh] md:h-[80vh] relative">
               {/* Background image layer */}
               <div className="absolute inset-0 -z-10">
                 <Image
@@ -136,19 +136,19 @@ const projects = [
                 <Header />
         
               {/* Hero text */}
-              <div className="relative z-10 min-h-[60vh] flex flex-col items-center justify-end text-center px-4">
-                <h2 className="font-serif text-white text-[32px] font-semibold md:text-[44px] lg:text-[56px]">
+              <div className="relative z-10 min-h-[50vh] sm:min-h-[55vh] md:min-h-[60vh] flex flex-col items-center justify-end text-center px-4">
+                <h2 className="font-serif text-white text-[26px] sm:text-[32px] font-semibold md:text-[44px] lg:text-[56px]">
                   Bedrooms
                 </h2>
-                <p className="text-gray-300 text-[14px] md:text-[17px] mt-4 ">
+                <p className="text-gray-300 text-[13px] sm:text-[14px] md:text-[17px] mt-3 md:mt-4 ">
                   Organize your bedroom in a better way
                 </p>
               </div>
             </div>
 
-            <div className='bg-[#F7F4EF] px-14 py-24'>
+            <div className='bg-[#F7F4EF] px-4 sm:px-6 md:px-14 py-12 sm:py-16 md:py-24'>
                  <motion.div 
-        className="flex flex-wrap items-center justify-center md:justify-start gap-1 mb-6 md:mb-6"
+        className="flex flex-wrap items-center justify-center md:justify-start gap-1.5 sm:gap-1 mb-6 md:mb-6"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -160,7 +160,7 @@ const projects = [
             <motion.button
               key={category}
               onClick={() => setActiveCategory(category)}
-              className={`px-4 md:px-6 py-2 md:py-2.5 rounded text-[13px] md:text-[15px] border border-gray-200 font-normal cursor-pointer transition-colors ${
+              className={`px-3 sm:px-4 md:px-6 py-1.5 sm:py-2 md:py-2.5 rounded text-[12px] sm:text-[13px] md:text-[15px] border border-gray-200 font-normal cursor-pointer transition-colors ${
                 isActive
                   ? "bg-[#1f1f1f] text-white"
                   : "bg-white text-[#2E2E2E] hover:bg-gray-100"
@@ -180,20 +180,20 @@ const projects = [
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
-          className="flex flex-col items-center justify-center text-center py-20 md:py-28 rounded"
+          className="flex flex-col items-center justify-center text-center py-16 sm:py-20 md:py-28 rounded px-4"
         >
-          <FaBoxOpen className="text-gray-300 mb-4 animate-bounce" size={60} />
-          <p className="font-serif text-[#1f1f1f] text-[20px] md:text-[24px]">
+          <FaBoxOpen className="text-gray-300 mb-4 animate-bounce" size={48} />
+          <p className="font-serif text-[#1f1f1f] text-[18px] sm:text-[20px] md:text-[24px]">
             No projects yet in {activeCategory}
           </p>
-          <p className="text-gray-500 text-[14px] md:text-[15px] mt-2 max-w-xs">
+          <p className="text-gray-500 text-[13px] sm:text-[14px] md:text-[15px] mt-2 max-w-xs">
             We&apos;re still adding pieces to this collection — check back soon
             or explore another category.
           </p>
         </motion.div>
       ) : (
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8"
           layout
         >
           <AnimatePresence mode="popLayout">
@@ -205,7 +205,7 @@ const projects = [
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.4, delay: i * 0.1 }}
-                className="relative w-full h-[300px] md:h-[420px] overflow-hidden group cursor-pointer"
+                className="relative w-full h-[220px] sm:h-[280px] md:h-[420px] overflow-hidden group cursor-pointer"
                 whileHover={{ scale: 1.02 }}
               >
                 <Image
@@ -214,8 +214,8 @@ const projects = [
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute inset-x-0 bottom-0 h-12 bg-black/10 backdrop-blur-sm flex items-center justify-center">
-                  <p className="text-white font-sans text-[13px] md:text-[13px] font-medium">
+                <div className="absolute inset-x-0 bottom-0 min-h-10 sm:h-12 bg-black/10 backdrop-blur-sm flex items-center justify-center px-2 py-1.5">
+                  <p className="text-white font-sans text-[11px] sm:text-[12px] md:text-[13px] font-medium text-center leading-snug line-clamp-2">
                     {project.label}
                   </p>
                 </div>
@@ -226,28 +226,28 @@ const projects = [
       )}
             </div>
 
-              <div className="max-w-3xl mx-auto text-center py-16">
+              <div className="max-w-3xl mx-auto text-center py-10 md:py-16 px-4">
        
-        <h2 className="font-serif text-[#1f2440] text-[32px] md:text-[38px] leading-tight">
+        <h2 className="font-serif text-[#1f2440] text-[26px] sm:text-[32px] md:text-[38px] leading-tight">
           FAQs About Bedroom Wardrobe
         </h2>
-        <p className="text-[#2E2E2E] text-[15px] md:text-[14px] mt-4">
-          Oppolia is a well-known company that manufactures a wide range of fitted wardrobes. 
+        <p className="text-[#2E2E2E] text-[14px] md:text-[15px] mt-4">
+          Oppolia is a well-known company that manufactures a wide range of fitted wardrobes. 
           At a very affordable cost. You will uncover everything you require to fit your room and lifestyle. We sell in bulk or retail
           . Learn about our many fitted wardrobe choices and designs below.
         </p>
       </div>
 
-        <div className="px-24 pb-24">
+        <div className="px-4 sm:px-8 md:px-16 lg:px-24 pb-12 md:pb-24">
               {faqs.map((faq, index) => {
                 const isOpen = openIndices.has(index)
                 return (
                   <div key={index} className="border-b border-gray-300">
                     <button
                       onClick={() => toggle(index)}
-                      className="w-full flex items-center justify-between py-6 text-left"
+                      className="w-full flex items-center justify-between py-4 md:py-6 text-left"
                     >
-                      <span className="text-[#1f2440] font-medium text-[16px] md:text-[18px] pr-4">
+                      <span className="text-[#1f2440] font-medium text-[15px] sm:text-[16px] md:text-[18px] pr-4">
                         {faq.question}
                       </span>
                       <span className="shrink-0 w-6 h-6 rounded-full border border-[#1f2440] flex items-center justify-center text-[#1f2440] text-xs">
@@ -264,7 +264,7 @@ const projects = [
                           transition={{ duration: 0.25, ease: "easeInOut" }}
                           className="overflow-hidden"
                         >
-                          <p className="text-gray-500 text-[15px] md:text-[16px] leading-relaxed pb-6 pr-10">
+                          <p className="text-gray-500 text-[14px] sm:text-[15px] md:text-[16px] leading-relaxed pb-6 pr-4 sm:pr-8 md:pr-10">
                             {faq.answer}
                           </p>
                         </motion.div>
