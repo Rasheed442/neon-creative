@@ -13,16 +13,19 @@ import {
   bedroomImages,
   bathimages,
   dwimages,
-  whbgimages
+  whbgimages,
+  furbgimages,
+  hcbgimages
 } from "@/contants";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaBoxOpen, FaMinus, FaPlus } from "react-icons/fa";
 import { useState } from "react";
 import CallToAction from "@/components/CallToAction";
 import Footer from "@/components/Footer";
+import FreeConsultation from "@/components/FreeConsultation";
 
 function page() {
-  const categories = ["All", "Whole House Solution"];
+  const categories = ["Furnitures"];
 
   const faqs = [
     {
@@ -74,36 +77,36 @@ function page() {
   };
   const projects = [
     {
-      image: whbgimages.wh1,
+      image: hcbgimages.hc1,
       label:
-        "Airis Series White And Wood Two-Tone Modern Style Kitchen Cabinet – OBK24L02",
+        "Modern Tatami Room Design OBT22-001",
       category: "Custom Wardrobes"
     },
     {
-      image: whbgimages.wh2,
+      image: hcbgimages.hc2,
       label:
-        "Cloud Series Luxury Style Kitchen Cabinets With Lacquer Finish – OBK24L04",
+        "High End Luxury Cow Leather Sofa OS-0120019",
       category: "Built In Wardrobes"
     },
     {
-      image: whbgimages.wh3,
-      label: "Como Series Modern Minimalist Semi-Open Kitchen",
+      image: hcbgimages.hc3,
+      label: "Elegant Solid White Dining Room Table OT-0120032",
       category: "Walk in Closet"
     },
     {
-      image: whbgimages.wh4,
+      image: hcbgimages.hc4,
       label:
-        "Hull Series Red Modern Minimalist Stylish Kitchen Cabinets – OBK24L03",
+        "Side Cabinet in High Gloss UV Lacquer Finish BLCG20016-033",
       category: "Hinge Door Wardrobe"
     },
     {
-      image: whbgimages.wh5,
-      label: "Lumi Series Purple Elegant Handleless Kitchen Cabinet – OBK24L07",
+      image: hcbgimages.hc5,
+      label: "Custom Modern Glossy White TV Units BLTV20014-033",
       category: "Sliding Door Wardrobe"
     },
     {
-      image: whbgimages.wh6,
-      label: "Lumi Series Purple Elegant Handleless Kitchen Cabinet – OBK24L07",
+      image: hcbgimages.hc6,
+      label: "Modern Gray Dining Room Table OT-0120045",
       category: "Sliding Door Wardrobe"
     }
   ];
@@ -120,7 +123,7 @@ function page() {
         {/* Background image layer */}
         <div className="absolute inset-0 -z-10">
           <Image
-            src={whbgimages.whbg}
+            src={hcbgimages.hcbg}
             alt="background"
             fill
             priority
@@ -139,16 +142,16 @@ function page() {
         {/* Hero text */}
         <div className="relative z-10 min-h-[60vh] flex flex-col items-center justify-end text-center px-4">
           <h2 className="font-serif text-white text-[32px] font-semibold md:text-[44px] lg:text-[56px]">
-            Whole House Solution
+            Home Cases
           </h2>
           <p className="text-gray-300 text-[14px] capitalize md:text-[17px] mt-4 ">
-          ONE STOP TO GET WHOLE HOUSE FURNITURE.
+          Explore One-Stop Whole House Solutions
           </p>
         </div>
       </div>
 
       <div className="bg-[#F7F4EF] px-14 py-24">
-        <motion.div
+        {/* <motion.div
           className="flex flex-wrap items-center justify-center md:justify-start gap-1 mb-6 md:mb-6"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -173,7 +176,24 @@ function page() {
               </motion.button>
             );
           })}
-        </motion.div>
+        </motion.div> */}
+         <motion.div 
+                className="flex flex-col items-center text-center mb-8 md:mb-16"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+              >
+                <div className="flex items-center gap-3 mb-4 md:mb-6">
+                  <div className="bg-[#E1AD56] h-[1.7px] w-10" />
+                  <div className="bg-[#E1AD56] h-2 w-2 rounded-full" />
+                </div>
+                <h2 className="font-serif text-[#2E2E2E] text-[32px] md:text-[40px] lg:text-[46px]">Our Global Projects</h2>
+                <p className="text-[#2E2E2E] text-[14px] md:text-[16px] mt-4 max-w-4xl px-4">
+                  Neon Africa delivers world-class solutions across 100+ export countries, completing over 10,000 projects 
+                  and earning the trust of millions of satisfied customers.
+                </p>
+              </motion.div>
 
         {/* Grid or Empty State */}
         {filteredProjects.length === 0 ? (
@@ -230,9 +250,9 @@ function page() {
         )}
       </div>
 
-      <div className="max-w-3xl mx-auto text-center py-16">
+      {/* <div className="max-w-3xl mx-auto text-center py-16">
         <h2 className="font-serif text-[#1f2440] text-[32px] md:text-[38px] leading-tight">
-          FAQs about Whole House Solution
+          FAQs about Furnitures
         </h2>
         <p className="text-[#2E2E2E] text-[15px] md:text-[14px] mt-4">
           Explore Oppolia’s premium interior doors, designed to fit every style and budget. With modern, classic, and custom options,
@@ -275,7 +295,8 @@ function page() {
             </div>
           );
         })}
-      </div>
+      </div> */}
+      <FreeConsultation/>
       <CallToAction />
       <Footer />
     </div>

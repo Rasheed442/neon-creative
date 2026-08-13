@@ -16,16 +16,16 @@ const navLinks = [
       { label: "Bedroom", href: "/bedroom" },
       { label: "Bathroom", href: "/bathroom" },
       { label: "Doors & Windows", href: "/door-windows" },
-      { label: "Whole House Solution", href: "#whole-house-solution" },
-      { label: "Furniture", href: "#furniture" },
+      { label: "Whole House Solution", href: "/whole-house-solution" },
+      { label: "Furniture", href: "/furniture" },
     ],
   },
   {
-    label: "Projects",
-    href: "#projects",
+    label: "Showcases",
+    href: "#",
     children: [
-      { label: "Residential", href: "#residential" },
-      { label: "Commercial", href: "#commercial" },
+      { label: "Home Cases", href: "/home-cases" },
+      { label: "Commercial Projects", href: "/commercial-projects" },
     ],
   },
 ];
@@ -41,6 +41,13 @@ function Header() {
     return () => {
       document.body.style.overflow = "";
     };
+  }, [isMenuOpen]);
+
+  // Reset mobile accordion state whenever the mobile menu closes
+  useEffect(() => {
+    if (!isMenuOpen) {
+      setOpenMobileAccordion(null)
+    }
   }, [isMenuOpen]);
 
   return (
@@ -108,13 +115,20 @@ function Header() {
             )}
           </div>
         ))}
-        <button className='bg-[#E1AD56] text-white px-6 py-2 rounded hover:bg-[#c9963d] transition-colors'>
-          Contact
-        </button>
+
+        <a
+          href="/contact"
+          className='flex items-center gap-1.5 hover:text-[#E1AD56] cursor-pointer transition-colors'
+        >
+          <button className='bg-[#E1AD56] text-white px-6 py-2 rounded hover:bg-[#c9963d] transition-colors'>
+            Contact
+          </button>
+        </a>
       </div>
 
       {/* Mobile Menu Button */}
       <button
+        type="button"
         className='md:hidden text-white text-2xl p-2 -mr-2 shrink-0'
         onClick={() => setIsMenuOpen(true)}
         aria-label="Open menu"
@@ -133,6 +147,7 @@ function Header() {
             className='fixed inset-0 h-[100dvh] bg-[#1f1f1f] z-[80] flex flex-col items-center justify-start gap-6 md:hidden overflow-y-auto pt-24 pb-10'
           >
             <button
+              type="button"
               className='absolute top-5 right-5 text-white text-3xl p-2'
               onClick={() => setIsMenuOpen(false)}
               aria-label="Close menu"
@@ -146,31 +161,32 @@ function Header() {
 
             {navLinks.map((link) => (
               <div key={link.label} className='flex flex-col items-center w-full px-8'>
-                <div
-                  className='flex items-center gap-2 text-white text-2xl font-serif hover:text-[#E1AD56] cursor-pointer transition-colors'
-                  onClick={() => {
-                    if (link.children) {
+                {link.children ? (
+                  <button
+                    type="button"
+                    onClick={() =>
                       setOpenMobileAccordion(
                         openMobileAccordion === link.label ? null : link.label
                       )
-                    } else {
-                      setIsMenuOpen(false)
                     }
-                  }}
-                >
-                  {link.children ? (
-                    <>
-                      {link.label}
-                      <FaChevronDown
-                        className={`text-base transition-transform duration-200 ${
-                          openMobileAccordion === link.label ? "rotate-180" : ""
-                        }`}
-                      />
-                    </>
-                  ) : (
-                    <a href={link.href}>{link.label}</a>
-                  )}
-                </div>
+                    className='flex items-center justify-center gap-2 text-white text-2xl font-serif hover:text-[#E1AD56] transition-colors w-full py-2'
+                  >
+                    {link.label}
+                    <FaChevronDown
+                      className={`text-base transition-transform duration-200 ${
+                        openMobileAccordion === link.label ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+                ) : (<a
+                  
+                    href={link.href}
+                    className='text-white text-2xl font-serif hover:text-[#E1AD56] cursor-pointer transition-colors w-full text-center py-2'
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {link.label}
+                  </a>
+                )}
 
                 <AnimatePresence>
                   {link.children && openMobileAccordion === link.label && (
@@ -179,7 +195,7 @@ function Header() {
                       animate={{ opacity: 1, height: "auto" }}
                       exit={{ opacity: 0, height: 0 }}
                       transition={{ duration: 0.2, ease: "easeInOut" }}
-                      className='flex flex-col items-center gap-3 mt-4 overflow-hidden'
+                      className='flex flex-col items-center gap-3 mt-4 overflow-hidden w-full'
                     >
                       {link.children.map((child) => (
                         <a
@@ -197,12 +213,14 @@ function Header() {
               </div>
             ))}
 
-            <button
-              className='bg-[#E1AD56] text-white px-8 py-3 rounded text-xl hover:bg-[#c9963d] transition-colors mt-4'
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Contact
-            </button>
+            <a href="/contact" onClick={() => setIsMenuOpen(false)}>
+              <button
+                type="button"
+                className='bg-[#E1AD56] text-white px-8 py-3 rounded text-xl hover:bg-[#c9963d] transition-colors mt-4'
+              >
+                Contact
+              </button>
+            </a>
           </motion.div>
         )}
       </AnimatePresence>

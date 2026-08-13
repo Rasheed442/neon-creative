@@ -13,7 +13,8 @@ import {
   bedroomImages,
   bathimages,
   dwimages,
-  whbgimages
+  whbgimages,
+  furbgimages
 } from "@/contants";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaBoxOpen, FaMinus, FaPlus } from "react-icons/fa";
@@ -22,7 +23,7 @@ import CallToAction from "@/components/CallToAction";
 import Footer from "@/components/Footer";
 
 function page() {
-  const categories = ["All", "Whole House Solution"];
+  const categories = ["Furnitures"];
 
   const faqs = [
     {
@@ -74,36 +75,36 @@ function page() {
   };
   const projects = [
     {
-      image: whbgimages.wh1,
+      image: furbgimages.fr1,
       label:
-        "Airis Series White And Wood Two-Tone Modern Style Kitchen Cabinet – OBK24L02",
+        "Modern Tatami Room Design OBT22-001",
       category: "Custom Wardrobes"
     },
     {
-      image: whbgimages.wh2,
+      image: furbgimages.fr2,
       label:
-        "Cloud Series Luxury Style Kitchen Cabinets With Lacquer Finish – OBK24L04",
+        "High End Luxury Cow Leather Sofa OS-0120019",
       category: "Built In Wardrobes"
     },
     {
-      image: whbgimages.wh3,
-      label: "Como Series Modern Minimalist Semi-Open Kitchen",
+      image: furbgimages.fr3,
+      label: "Elegant Solid White Dining Room Table OT-0120032",
       category: "Walk in Closet"
     },
     {
-      image: whbgimages.wh4,
+      image: furbgimages.fr4,
       label:
-        "Hull Series Red Modern Minimalist Stylish Kitchen Cabinets – OBK24L03",
+        "Side Cabinet in High Gloss UV Lacquer Finish BLCG20016-033",
       category: "Hinge Door Wardrobe"
     },
     {
-      image: whbgimages.wh5,
-      label: "Lumi Series Purple Elegant Handleless Kitchen Cabinet – OBK24L07",
+      image: furbgimages.fr5,
+      label: "Custom Modern Glossy White TV Units BLTV20014-033",
       category: "Sliding Door Wardrobe"
     },
     {
-      image: whbgimages.wh6,
-      label: "Lumi Series Purple Elegant Handleless Kitchen Cabinet – OBK24L07",
+      image: furbgimages.fr6,
+      label: "Modern Gray Dining Room Table OT-0120045",
       category: "Sliding Door Wardrobe"
     }
   ];
@@ -120,7 +121,7 @@ function page() {
         {/* Background image layer */}
         <div className="absolute inset-0 -z-10">
           <Image
-            src={whbgimages.whbg}
+            src={furbgimages.furbg}
             alt="background"
             fill
             priority
@@ -139,10 +140,10 @@ function page() {
         {/* Hero text */}
         <div className="relative z-10 min-h-[60vh] flex flex-col items-center justify-end text-center px-4">
           <h2 className="font-serif text-white text-[32px] font-semibold md:text-[44px] lg:text-[56px]">
-            Whole House Solution
+            Furnitures
           </h2>
           <p className="text-gray-300 text-[14px] capitalize md:text-[17px] mt-4 ">
-          ONE STOP TO GET WHOLE HOUSE FURNITURE.
+          Create  A Warm And Cozy Home.
           </p>
         </div>
       </div>
@@ -232,7 +233,7 @@ function page() {
 
       <div className="max-w-3xl mx-auto text-center py-16">
         <h2 className="font-serif text-[#1f2440] text-[32px] md:text-[38px] leading-tight">
-          FAQs about Whole House Solution
+          FAQs about Furnitures
         </h2>
         <p className="text-[#2E2E2E] text-[15px] md:text-[14px] mt-4">
           Explore Oppolia’s premium interior doors, designed to fit every style and budget. With modern, classic, and custom options,

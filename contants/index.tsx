@@ -63,6 +63,57 @@ import dw4 from "../assets/Images/DoorWindow/dw4.png"
 import dw5 from "../assets/Images/DoorWindow/dw5.png"
 import dw6 from "../assets/Images/DoorWindow/dw6.png"
 
+// whole house
+
+import whbg from "../assets/Images/wholeHouse/whbg.png"
+import wh1 from "../assets/Images/wholeHouse/wh1.png"
+import wh2 from "../assets/Images/wholeHouse/wh2.png"
+import wh3 from "../assets/Images/wholeHouse/wh3.png"
+import wh4 from "../assets/Images/wholeHouse/wh4.png"
+import wh5 from "../assets/Images/wholeHouse/wh5.png"
+import wh6 from "../assets/Images/wholeHouse/wh6.png"
+
+// furniture
+import furbg from "../assets/Images/Furniture/furbg.png"
+import fr1 from "../assets/Images/Furniture/fr1.png"
+import fr2 from "../assets/Images/Furniture/fr2.png"
+import fr3 from "../assets/Images/Furniture/fr3.png"
+import fr4 from "../assets/Images/Furniture/fr4.png"
+import fr5 from "../assets/Images/Furniture/fr5.png"
+import fr6 from "../assets/Images/Furniture/fr6.png"
+
+
+// home cases
+import hcbg from "../assets/Images/Home-Cases/hcbg.png"
+import hc1 from "../assets/Images/Home-Cases/hc1.png"
+import hc2 from "../assets/Images/Home-Cases/hc2.png"
+import hc3 from "../assets/Images/Home-Cases/hc3.png"
+import hc4 from "../assets/Images/Home-Cases/hc4.png"
+import hc5 from "../assets/Images/Home-Cases/hc5.png"
+import hc6 from "../assets/Images/Home-Cases/hc6.png"
+
+
+
+// commercial pages
+import cmbg from "../assets/Images/commercial-projects/cmbg.png"
+
+
+// consultation
+import consultationImg from "@/assets/Images/consultation/consultationImg.png"
+
+
+// contact
+import ctbg from "@/assets/Images/contact-us/ctbg.png"
+import cont from "@/assets/Images/contact-us/cont.png"
+
+
+export const ctbgImages = { 
+    ctbg,
+    cont
+}
+export const consultationImages = { 
+    consultationImg,
+}
 export const bedroomImages = {
     bedbg,
     be1,
@@ -90,6 +141,40 @@ export const dwimages = {
   dw5,
   dw6,
 };
+export const whbgimages = {
+  whbg,
+  wh1,
+  wh2,
+  wh3,
+  wh4,
+  wh5,
+  wh6,
+};
+export const furbgimages = {
+furbg,
+fr1,
+fr2,
+fr3,
+fr4,
+fr5,
+fr6
+};
+
+
+export const hcbgimages = {
+    hcbg,
+    hc1,
+    hc2,
+    hc3,
+    hc4,
+    hc5,
+    hc6,
+}
+export const cpbgimages = {
+    cmbg
+}
+
+
 
 export const heroImages = [herobg1, herobg2, herobg3, herobg4,herobg5,herobg6];
 export { logo,about, Kitchen, Wardrobe, Ceiling, Stone, bedroom, saldine, dining,youtube, kitchbg,cust3,cust4, cust5,cust6, livingromm, modkitchen,ctabg,cust1,cust2 }
