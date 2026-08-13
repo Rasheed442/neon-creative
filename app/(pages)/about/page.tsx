@@ -18,37 +18,29 @@ function page() {
 ];
   return (
     <div>
-         <div className="h-[80vh] relative">
-      {/* Background image layer */}
-      <div className="absolute inset-0 -z-10">
-        <Image
-          src={saldine}
-          alt="background"
-          fill
-          priority
-          className="object-cover transition-opacity duration-700 ease-in-out"
-        />
-      </div>
+      <div className="h-[80vh] relative">
+  {/* Background image layer */}
+  <div className="absolute inset-0 -z-10">
+    <Image src={saldine} alt="background" fill priority className="object-cover transition-opacity duration-700 ease-in-out" />
+  </div>
 
-      {/* Overlay for contrast */}
-      <div className="absolute inset-0 -z-10 bg-black/30" />
+  {/* Overlay for contrast */}
+  <div className="absolute inset-0 -z-10 bg-black/30" />
 
-      {/* Header */}
-      <div className="relative z-10">
-        <Header />
-      </div>
+  {/* Header — no wrapping z-10 div */}
+  <Header />
 
-      {/* Hero text */}
-      <div className="relative z-10 min-h-[60vh] flex flex-col items-center justify-end text-center px-4">
-        <h2 className="font-serif text-white text-[32px] font-semibold md:text-[44px] lg:text-[56px]">
-          About Neon Creative Design Limited
-        </h2>
-        <p className="text-gray-300 text-[14px] md:text-[17px] mt-4 ">
-          We specialize in creating elegant kitchens, bespoke wardrobes, TV units, storage solutions, and complete interior finishing<br/>
-           that combine beauty with functionality.
-        </p>
-      </div>
-    </div>
+  {/* Hero text */}
+                <div className="relative z-10 min-h-[60vh] flex flex-col items-center justify-end text-center px-4">
+                <h2 className="font-serif text-white text-[32px] font-semibold md:text-[44px] lg:text-[56px]">
+                  Bathroom Vanities
+                </h2>
+                <p className="text-gray-300 text-[14px] md:text-[17px] mt-4 ">
+                  Customised bathroom cabinets in your style, make your bathroom a total refresh look.
+                </p>
+              </div>
+
+</div>
        <motion.div 
                     className="w-full bg-[#F7F4EF] px-4 md:px-14 py-12 md:py-24 flex flex-col md:flex-row items-center gap-8 md:gap-16"
                     initial={{ opacity: 0 }}

@@ -2,7 +2,8 @@
 
 import { logo } from '@/contants'
 import Image from 'next/image'
-import React, { useState, useEffect } from 'react'
+import Link from 'next/link'
+import React, { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { FaBars, FaTimes, FaChevronDown, FaChevronRight } from 'react-icons/fa'
 
@@ -10,7 +11,7 @@ const navLinks = [
   { label: "About", href: "/about" },
   {
     label: "Products",
-    href: "#products",
+    href: "/products",
     children: [
       { label: "Custom Kitchen", href: "/custom-kitchen" },
       { label: "Bedroom", href: "/bedroom" },
@@ -22,7 +23,7 @@ const navLinks = [
   },
   {
     label: "Showcases",
-    href: "#",
+    href: "/home-cases",
     children: [
       { label: "Home Cases", href: "/home-cases" },
       { label: "Commercial Projects", href: "/commercial-projects" },
@@ -34,6 +35,26 @@ function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [openDropdown, setOpenDropdown] = useState<string | null>(null)
   const [openMobileAccordion, setOpenMobileAccordion] = useState<string | null>(null)
+  const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
+
+  const cancelClose = () => {
+    if (closeTimer.current) {
+      clearTimeout(closeTimer.current)
+      closeTimer.current = null
+    }
+  }
+
+  const openNow = (label: string) => {
+    cancelClose()
+    setOpenDropdown(label)
+  }
+
+  const scheduleClose = (label: string) => {
+    cancelClose()
+    closeTimer.current = setTimeout(() => {
+      setOpenDropdown((current) => (current === label ? null : current))
+    }, 250)
+  }
 
   // Lock body scroll while the mobile menu is open
   useEffect(() => {
@@ -71,22 +92,37 @@ function Header() {
           <div
             key={link.label}
             className='relative'
-            onMouseEnter={() => link.children && setOpenDropdown(link.label)}
-            onMouseLeave={() => link.children && setOpenDropdown(null)}
+            onMouseEnter={() => link.children && openNow(link.label)}
+            onMouseLeave={() => link.children && scheduleClose(link.label)}
           >
-            <a
-              href={link.href}
-              className='flex items-center gap-1.5 hover:text-[#E1AD56] cursor-pointer transition-colors'
-            >
-              {link.label}
-              {link.children && (
+            {link.children ? (
+              <button
+                type="button"
+                onClick={() =>
+                  setOpenDropdown((prev) => (prev === link.label ? null : link.label))
+                }
+                className='flex items-center gap-1.5 hover:text-[#E1AD56] cursor-pointer transition-colors text-white'
+              >
+                {link.label}
                 <FaChevronDown
                   className={`text-xs transition-transform duration-200 ${
                     openDropdown === link.label ? "rotate-180" : ""
                   }`}
                 />
-              )}
-            </a>
+              </button>
+            ) : (
+              <Link
+                href={link.href}
+                className='flex items-center gap-1.5 hover:text-[#E1AD56] cursor-pointer transition-colors'
+              >
+                {link.label}
+              </Link>
+            )}
+
+            {/* Invisible bridge — closes the gap between button and panel so hover doesn't drop */}
+            {link.children && (
+              <div className='absolute top-full left-0 right-0 h-3' />
+            )}
 
             {/* Dropdown Panel */}
             {link.children && (
@@ -97,17 +133,23 @@ function Header() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -8 }}
                     transition={{ duration: 0.18, ease: "easeOut" }}
-                    className='absolute top-full right-0 mt-3 w-64 bg-white rounded-md shadow-xl overflow-hidden py-2'
+                    className='absolute top-full right-0 mt-3 w-64 bg-white rounded-md shadow-xl overflow-hidden py-2 z-[60]'
+                    onMouseEnter={() => openNow(link.label)}
+                    onMouseLeave={() => scheduleClose(link.label)}
                   >
                     {link.children.map((child) => (
-                      <a
+                      <Link
                         key={child.label}
                         href={child.href}
                         className='flex items-center justify-between px-5 py-3 text-[#1f1f1f] hover:bg-gray-50 hover:text-[#E1AD56] transition-colors text-[15px]'
+                        onClick={() => {
+                          cancelClose()
+                          setOpenDropdown(null)
+                        }}
                       >
                         {child.label}
                         <FaChevronRight className='text-xs opacity-60' />
-                      </a>
+                      </Link>
                     ))}
                   </motion.div>
                 )}
@@ -116,14 +158,14 @@ function Header() {
           </div>
         ))}
 
-        <a
+        <Link
           href="/contact"
           className='flex items-center gap-1.5 hover:text-[#E1AD56] cursor-pointer transition-colors'
         >
           <button className='bg-[#E1AD56] text-white px-6 py-2 rounded hover:bg-[#c9963d] transition-colors'>
             Contact
           </button>
-        </a>
+        </Link>
       </div>
 
       {/* Mobile Menu Button */}
@@ -178,14 +220,14 @@ function Header() {
                       }`}
                     />
                   </button>
-                ) : (<a
-                  
+                ) : (
+                  <Link
                     href={link.href}
                     className='text-white text-2xl font-serif hover:text-[#E1AD56] cursor-pointer transition-colors w-full text-center py-2'
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 )}
 
                 <AnimatePresence>
@@ -198,14 +240,14 @@ function Header() {
                       className='flex flex-col items-center gap-3 mt-4 overflow-hidden w-full'
                     >
                       {link.children.map((child) => (
-                        <a
+                        <Link
                           key={child.label}
                           href={child.href}
                           className='text-gray-300 text-lg font-sans hover:text-[#E1AD56] transition-colors'
                           onClick={() => setIsMenuOpen(false)}
                         >
                           {child.label}
-                        </a>
+                        </Link>
                       ))}
                     </motion.div>
                   )}
@@ -213,14 +255,14 @@ function Header() {
               </div>
             ))}
 
-            <a href="/contact" onClick={() => setIsMenuOpen(false)}>
+            <Link href="/contact" onClick={() => setIsMenuOpen(false)}>
               <button
                 type="button"
                 className='bg-[#E1AD56] text-white px-8 py-3 rounded text-xl hover:bg-[#c9963d] transition-colors mt-4'
               >
                 Contact
               </button>
-            </a>
+            </Link>
           </motion.div>
         )}
       </AnimatePresence>

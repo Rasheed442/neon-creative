@@ -133,9 +133,7 @@ function page() {
         <div className="absolute inset-0 -z-10 bg-black/30" />
 
         {/* Header */}
-        <div className="relative z-10">
           <Header />
-        </div>
 
         {/* Hero text */}
         <div className="relative z-10 min-h-[60vh] flex flex-col items-center justify-end text-center px-4">
