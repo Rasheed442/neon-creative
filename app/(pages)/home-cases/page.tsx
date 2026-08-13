@@ -24,7 +24,7 @@ import CallToAction from "@/components/CallToAction";
 import Footer from "@/components/Footer";
 import FreeConsultation from "@/components/FreeConsultation";
 
-function page() {
+function Page() {
   const categories = ["Furnitures"];
 
   const faqs = [
@@ -138,17 +138,17 @@ function page() {
           <Header />
 
         {/* Hero text */}
-        <div className="relative z-10 min-h-[60vh] flex flex-col items-center justify-end text-center px-4">
-          <h2 className="font-serif text-white text-[32px] font-semibold md:text-[44px] lg:text-[56px]">
+        <div className="relative z-10 min-h-[60vh] flex flex-col items-center justify-end text-center px-4 sm:px-6">
+          <h2 className="font-serif text-white text-[28px] font-semibold sm:text-[32px] md:text-[44px] lg:text-[56px]">
             Home Cases
           </h2>
-          <p className="text-gray-300 text-[14px] capitalize md:text-[17px] mt-4 ">
-          Explore One-Stop Whole House Solutions
+          <p className="text-gray-300 text-[12px] capitalize sm:text-[14px] md:text-[17px] mt-3 sm:mt-4">
+            Explore One-Stop Whole House Solutions
           </p>
         </div>
       </div>
 
-      <div className="bg-[#F7F4EF] px-14 py-24">
+      <div className="bg-[#F7F4EF] px-4 py-12 sm:px-8 md:px-10 lg:px-14 lg:py-24">
         {/* <motion.div
           className="flex flex-wrap items-center justify-center md:justify-start gap-1 mb-6 md:mb-6"
           initial={{ opacity: 0, y: 20 }}
@@ -186,8 +186,8 @@ function page() {
                   <div className="bg-[#E1AD56] h-[1.7px] w-10" />
                   <div className="bg-[#E1AD56] h-2 w-2 rounded-full" />
                 </div>
-                <h2 className="font-serif text-[#2E2E2E] text-[32px] md:text-[40px] lg:text-[46px]">Our Global Projects</h2>
-                <p className="text-[#2E2E2E] text-[14px] md:text-[16px] mt-4 max-w-4xl px-4">
+                <h2 className="font-serif text-[#2E2E2E] text-[26px] sm:text-[32px] md:text-[40px] lg:text-[46px]">Our Global Projects</h2>
+                <p className="text-[#2E2E2E] text-[13px] sm:text-[14px] md:text-[16px] mt-4 max-w-4xl px-4 leading-relaxed">
                   Neon Africa delivers world-class solutions across 100+ export countries, completing over 10,000 projects 
                   and earning the trust of millions of satisfied customers.
                 </p>
@@ -237,7 +237,7 @@ function page() {
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-x-0 bottom-0 h-12 bg-black/10 backdrop-blur-sm flex items-center justify-center">
-                    <p className="text-white font-sans text-[13px] md:text-[13px] font-medium">
+                    <p className="text-white font-sans text-center text-[13px] md:text-[13px] font-medium">
                       {project.label}
                     </p>
                   </div>
@@ -301,4 +301,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;

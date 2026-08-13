@@ -2,27 +2,14 @@
 
 import Header from "@/components/Header";
 import Image from "next/image";
-import {
-  cust2,
-  cust1,
-  cust3,
-  kitchbg,
-  cust6,
-  cust5,
-  cust4,
-  bedroomImages,
-  bathimages,
-  dwimages,
-  whbgimages,
-  furbgimages
-} from "@/contants";
+import { furbgimages } from "@/contants";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaBoxOpen, FaMinus, FaPlus } from "react-icons/fa";
 import { useState } from "react";
 import CallToAction from "@/components/CallToAction";
 import Footer from "@/components/Footer";
 
-function page() {
+function Page() {
   const categories = ["Furnitures"];
 
   const faqs = [
@@ -146,7 +133,7 @@ function page() {
         </div>
       </div>
 
-      <div className="bg-[#F7F4EF] px-14 py-24">
+      <div className="bg-[#F7F4EF] px-4 py-12 sm:px-8 md:px-10 lg:px-14 lg:py-24">
         <motion.div
           className="flex flex-wrap items-center justify-center md:justify-start gap-1 mb-6 md:mb-6"
           initial={{ opacity: 0, y: 20 }}
@@ -218,7 +205,7 @@ function page() {
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-x-0 bottom-0 h-12 bg-black/10 backdrop-blur-sm flex items-center justify-center">
-                    <p className="text-white font-sans text-[13px] md:text-[13px] font-medium">
+                    <p className="text-white font-sans text-center  text-[13px] md:text-[13px] font-medium">
                       {project.label}
                     </p>
                   </div>
@@ -229,17 +216,17 @@ function page() {
         )}
       </div>
 
-      <div className="max-w-3xl mx-auto text-center py-16">
-        <h2 className="font-serif text-[#1f2440] text-[32px] md:text-[38px] leading-tight">
+      <div className="max-w-3xl mx-auto text-center px-4 py-12 sm:px-6 md:px-8 md:py-16">
+        <h2 className="font-serif text-[#1f2440] text-[28px] sm:text-[32px] md:text-[38px] leading-tight">
           FAQs about Furnitures
         </h2>
-        <p className="text-[#2E2E2E] text-[15px] md:text-[14px] mt-4">
+        <p className="text-[#2E2E2E] text-[14px] md:text-[14px] mt-4 leading-relaxed">
           Explore Oppolia’s premium interior doors, designed to fit every style and budget. With modern, classic, and custom options,
            you can create the perfect entrance for any room in your home.
         </p>
       </div>
 
-      <div className="px-24 pb-24">
+      <div className="px-4 pb-12 sm:px-6 md:px-10 lg:px-24 lg:pb-24">
         {faqs.map((faq, index) => {
           const isOpen = openIndices.has(index);
           return (
@@ -281,4 +268,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;
