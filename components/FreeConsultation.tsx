@@ -3,7 +3,7 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { consultationImages, consultationImg } from '@/contants'
+import { consultationImages } from '@/contants'
 
 function FreeConsultation() {
   const [formData, setFormData] = useState({

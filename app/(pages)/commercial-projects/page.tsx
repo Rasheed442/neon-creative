@@ -3,18 +3,7 @@
 import Header from "@/components/Header";
 import Image from "next/image";
 import {
-  cust2,
-  cust1,
-  cust3,
-  kitchbg,
-  cust6,
-  cust5,
-  cust4,
-  bedroomImages,
-  bathimages,
-  dwimages,
-  whbgimages,
-  furbgimages,
+
   hcbgimages,
   cpbgimages
 } from "@/contants";
