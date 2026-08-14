@@ -78,32 +78,32 @@ const faqs = [
 const projects = [
   {
     image: bedroomImages.be1,
-    label: "Airis Series White And Wood Two-Tone Modern Style Kitchen Cabinet – OBK24L02",
+    label: "Cilan Series Modern Elegance Two Tone Italian Wardrobe – OBW24L04",
     category: "Custom Wardrobes",
   },
   {
     image: bedroomImages.be2,
-    label: "Cloud Series Luxury Style Kitchen Cabinets With Lacquer Finish – OBK24L04",
+    label: "Cloud Series Luxury Modern Bedroom Wardrobe With Island – OBW24L05",
     category: "Built In Wardrobes",
   },
   {
     image: bedroomImages.be3,
-    label: "Como Series Modern Minimalist Semi-Open Kitchen",
+    label: "Dark Grey Custom Built-in Closet with Island OBW23-M04",
     category: "Walk in Closet",
   },
   {
     image: bedroomImages.be4,
-    label: "Hull Series Red Modern Minimalist Stylish Kitchen Cabinets – OBK24L03",
+    label: "Light Grey Wardrobe in Leather Textured PVC Finish OBW23-PVC03",
     category: "Hinge Door Wardrobe",
   },
   {
     image: bedroomImages.be5,
-    label: "Lumi Series Purple Elegant Handleless Kitchen Cabinet – OBK24L07",
+    label: "Minimalist Elegance Bedroom with Walk-in Closet – OBW25L02",
     category: "Sliding Door Wardrobe",
   },
   {
     image: bedroomImages.be6,
-    label: "Lumi Series Purple Elegant Handleless Kitchen Cabinet – OBK24L07",
+    label: "Modern Luxury Closet in Dark Grey and Dark Wood OBW23-L07",
     category: "Sliding Door Wardrobe",
   }
 

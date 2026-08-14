@@ -75,34 +75,34 @@ function page() {
     {
       image: dwimages.dw1,
       label:
-        "Airis Series White And Wood Two-Tone Modern Style Kitchen Cabinet – OBK24L02",
+        "Brown Walnut Shaker Style WPC Door – YDM003D",
       category: "Custom Wardrobes"
     },
     {
       image: dwimages.dw2,
       label:
-        "Cloud Series Luxury Style Kitchen Cabinets With Lacquer Finish – OBK24L04",
+        "French Plane Tree Wood WPC Door – YDM003D",
       category: "Built In Wardrobes"
     },
     {
       image: dwimages.dw3,
-      label: "Como Series Modern Minimalist Semi-Open Kitchen",
+      label: "Gray Flat Interior WPC Door – YDM001D",
       category: "Walk in Closet"
     },
     {
       image: dwimages.dw4,
       label:
-        "Hull Series Red Modern Minimalist Stylish Kitchen Cabinets – OBK24L03",
+        "Gray Oak WPC Interior Door – YDM002D",
       category: "Hinge Door Wardrobe"
     },
     {
       image: dwimages.dw5,
-      label: "Lumi Series Purple Elegant Handleless Kitchen Cabinet – OBK24L07",
+      label: "Modern Beige WPC Interior Door – YDM002D",
       category: "Sliding Door Wardrobe"
     },
     {
       image: dwimages.dw6,
-      label: "Lumi Series Purple Elegant Handleless Kitchen Cabinet – OBK24L07",
+      label: "White Oak Interior WPC Door – YDM001D",
       category: "Sliding Door Wardrobe"
     }
   ];

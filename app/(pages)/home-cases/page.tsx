@@ -79,34 +79,34 @@ function Page() {
     {
       image: hcbgimages.hc1,
       label:
-        "Modern Tatami Room Design OBT22-001",
+        "Airis Series White And Wood Two-Tone Modern Style Kitchen Cabinet – OBK24L02",
       category: "Custom Wardrobes"
     },
     {
       image: hcbgimages.hc2,
       label:
-        "High End Luxury Cow Leather Sofa OS-0120019",
+        "Cloud Series Luxury Style Kitchen Cabinets With Lacquer Finish – OBK24L04",
       category: "Built In Wardrobes"
     },
     {
       image: hcbgimages.hc3,
-      label: "Elegant Solid White Dining Room Table OT-0120032",
+      label: "Como Series Modern Minimalist Semi-Open Kitchen",
       category: "Walk in Closet"
     },
     {
       image: hcbgimages.hc4,
       label:
-        "Side Cabinet in High Gloss UV Lacquer Finish BLCG20016-033",
+        "Hull Series Red Modern Minimalist Stylish Kitchen Cabinets – OBK24L03",
       category: "Hinge Door Wardrobe"
     },
     {
       image: hcbgimages.hc5,
-      label: "Custom Modern Glossy White TV Units BLTV20014-033",
+      label: "Lumi Series Purple Elegant Handleless Kitchen Cabinet – OBK24L07",
       category: "Sliding Door Wardrobe"
     },
     {
       image: hcbgimages.hc6,
-      label: "Modern Gray Dining Room Table OT-0120045",
+      label: "Minimalist Elegance Red and Grey Open Concept Kitchen with Island – OBK25L02",
       category: "Sliding Door Wardrobe"
     }
   ];

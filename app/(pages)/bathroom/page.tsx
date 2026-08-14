@@ -76,32 +76,32 @@ const faqs = [
 const projects = [
   {
     image: bathimages.bath1,
-    label: "Airis Series White And Wood Two-Tone Modern Style Kitchen Cabinet – OBK24L02",
+    label: "Cilan Series Red Light Luxury Bathroom Cabinet Floating Vanity – OBV24P01",
     category: "Custom Wardrobes",
   },
   {
     image: bathimages.bath2,
-    label: "Cloud Series Luxury Style Kitchen Cabinets With Lacquer Finish – OBK24L04",
+    label: "Cloud Series Modern Luxury Bathroom Cabinet Floating Vanity – OBV24L02",
     category: "Built In Wardrobes",
   },
   {
     image: bathimages.bath3,
-    label: "Como Series Modern Minimalist Semi-Open Kitchen",
+    label: "Contemporary Floating Bathroom Vanity with LED Mirror Cabinet – OBV24L05",
     category: "Walk in Closet",
   },
   {
     image: bathimages.bath4,
-    label: "Hull Series Red Modern Minimalist Stylish Kitchen Cabinets – OBK24L03",
+    label: "Modern Floating Bathroom Vanity with LED Mirror – OBV24L04",
     category: "Hinge Door Wardrobe",
   },
   {
     image: bathimages.bath5,
-    label: "Lumi Series Purple Elegant Handleless Kitchen Cabinet – OBK24L07",
+    label: "Modern Floating Vanity in Textured Melamine Finish OBV23-M01",
     category: "Sliding Door Wardrobe",
   },
   {
     image: bathimages.bath6,
-    label: "Lumi Series Purple Elegant Handleless Kitchen Cabinet – OBK24L07",
+    label: "Modern Gray Wall-Mounted Bathroom Vanity with Mirror Cabinet – OBV24L03",
     category: "Sliding Door Wardrobe",
   }
 

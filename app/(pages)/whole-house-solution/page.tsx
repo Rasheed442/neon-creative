@@ -64,34 +64,34 @@ function Page() {
     {
       image: whbgimages.wh1,
       label:
-        "Airis Series White And Wood Two-Tone Modern Style Kitchen Cabinet – OBK24L02",
+        "ONE STOP TO GET WHOLE HOUSE FURNITURE.",
       category: "Custom Wardrobes"
     },
     {
       image: whbgimages.wh2,
       label:
-        "Cloud Series Luxury Style Kitchen Cabinets With Lacquer Finish – OBK24L04",
+        "Cilan Series Modern Elegance Italian Style Contemporary Interior Design – OB24AP03",
       category: "Built In Wardrobes"
     },
     {
       image: whbgimages.wh3,
-      label: "Como Series Modern Minimalist Semi-Open Kitchen",
+      label: "Como Series Modern Beige and Walnut Whole-House Design",
       category: "Walk in Closet"
     },
     {
       image: whbgimages.wh4,
       label:
-        "Hull Series Red Modern Minimalist Stylish Kitchen Cabinets – OBK24L03",
+        "Contemporary Home Design with Custom Joinery OB23-Villa01",
       category: "Hinge Door Wardrobe"
     },
     {
       image: whbgimages.wh5,
-      label: "Lumi Series Purple Elegant Handleless Kitchen Cabinet – OBK24L07",
+      label: "Cream Interior Design Warm White Fitted Furniture OB23-Apart02",
       category: "Sliding Door Wardrobe"
     },
     {
       image: whbgimages.wh6,
-      label: "Lumi Series Purple Elegant Handleless Kitchen Cabinet – OBK24L07",
+      label: "Cybel Series Modern Whole House Interior Design – OB24AP09",
       category: "Sliding Door Wardrobe"
     }
   ];
