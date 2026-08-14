@@ -112,7 +112,7 @@ function VisionMission() {
   return (
     <div>
       <motion.div
-        className="w-full bg-[#2a2a2a] px-4 md:px-14 py-12 md:py-24"
+        className="w-full bg-[#2a2a2a] px-4 py-12 sm:px-6 md:px-14 md:py-24"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true, margin: "-100px" }}
@@ -129,21 +129,21 @@ function VisionMission() {
             <div className="bg-white h-[1.7px] w-10" />
             <div className="bg-[#E1AD56] h-2 w-2 rounded-full" />
           </div>
-          <h2 className="font-serif text-white text-[32px] md:text-[40px] lg:text-[46px]">
+          <h2 className="font-serif text-white text-[28px] sm:text-[32px] md:text-[40px] lg:text-[46px]">
             Vision & Mission
           </h2>
-          <p className="text-gray-300 text-[14px] md:text-[16px] mt-4 max-w-[650px] px-4">
+          <p className="text-gray-300 text-[13px] sm:text-[14px] md:text-[16px] mt-4 max-w-[650px] px-2 sm:px-4 leading-relaxed">
             We are committed to creating beautifully crafted cabinetry that
             combines thoughtful design
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 place-items-center px-14">
+        <div className="grid grid-cols-1 gap-6 place-items-center sm:grid-cols-2 lg:grid-cols-2 sm:px-2 md:px-6 lg:px-14">
           {features.map((feature, i) => {
             return (
               <motion.div
                 key={i}
-                className="bg-[#242424] rounded p-6 md:py-10 flex gap-4"
+                className="bg-[#242424] rounded p-4 sm:p-5 md:p-6 md:py-10 flex flex-col gap-4 sm:flex-row sm:items-start"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -151,16 +151,16 @@ function VisionMission() {
                 whileHover={{ y: -8, backgroundColor: "#444444" }}
               >
                 <motion.div
-                  className="text-[#E1AD56]"
+                  className="text-[#E1AD56] flex-shrink-0 mx-auto sm:mx-0"
                   whileHover={{ scale: 1.1 }}
                 >
                   {feature.icon}
                 </motion.div>
-                <div className="flex flex-col gap-2">
-                  <h3 className=" text-white text-[16px] md:text-[18px] lg:text-[20px]">
+                <div className="flex flex-col gap-2 text-center sm:text-left">
+                  <h3 className="text-white text-[16px] md:text-[18px] lg:text-[20px]">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-300 text-[12px] md:text-[16px] leading-relaxed">
+                  <p className="text-gray-300 text-[12px] sm:text-[13px] md:text-[16px] leading-relaxed">
                     {feature.description}
                   </p>
                 </div>
@@ -169,8 +169,14 @@ function VisionMission() {
           })}
         </div>
       </motion.div>
-      <div className="p-8 my-14 flex items-center justify-center">
-        <Image src={youtube} alt="" width={1500} height={1500} />
+      <div className="px-4 py-8 my-8 sm:px-6 md:p-8 md:my-14 flex items-center justify-center">
+        <Image
+          src={youtube}
+          alt="youtube preview"
+          width={1500}
+          height={1500}
+          className="w-full h-auto max-w-[1500px]"
+        />
       </div>
     </div>
   );

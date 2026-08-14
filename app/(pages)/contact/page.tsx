@@ -27,11 +27,12 @@ function Page() {
 
         {/* Hero text */}
         <div className="relative z-10 min-h-[60vh] flex flex-col items-center justify-end text-center px-4 sm:px-6">
-          <h2 className="font-serif text-white text-[28px] font-semibold sm:text-[32px] md:text-[44px] lg:text-[56px]">
-            Commercial Project
+          <h2 className="font-serif text-white text-[28px] sm:text-[32px] md:text-[45px] lg:text-[56px]">
+            Let’s Talk About <span className='text-[#E1AD56] font-light  italic'>Your Space </span>
           </h2>
-          <p className="text-gray-300 text-[12px] capitalize sm:text-[14px] md:text-[17px] mt-3 sm:mt-4">
-            Explore One-Stop Interior Design Solutions
+          <p className="text-gray-300 text-[12px] max-w-3xl capitalize sm:text-[14px] md:text-[17px] mt-3 sm:mt-4">
+            Have a project in mind or need help finding the right cabinetry solution? Our team is ready to listen,
+             answer your questions, and help you take the next step.
           </p>
         </div>
       </div>
