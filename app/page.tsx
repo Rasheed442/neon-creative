@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import Header from "@/components/Header";
 import { heroImages } from "@/contants";
 import Hero from "@/components/Hero";
@@ -14,8 +15,20 @@ import CallToAction from "@/components/CallToAction";
 import Footer from "@/components/Footer";
 
 export default function Home() {
+  const router = useRouter();
   const [current, setCurrent] = useState(0);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
+
+  const handleViewWork = () => {
+    document.getElementById("featured-projects")?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
+
+  const handleRequestQuote = () => {
+    router.push("/contact");
+  };
 
   const handleNext = () => {
     setCurrent((prev) => (prev + 1) % heroImages.length);
@@ -80,7 +93,12 @@ export default function Home() {
         {/* Content */}
         <div className="relative z-10">
           <Header />
-          <Hero onNext={handleNext} onPrev={handlePrev} />
+          <Hero
+            onNext={handleNext}
+            onPrev={handlePrev}
+            onViewWork={handleViewWork}
+            onRequestQuote={handleRequestQuote}
+          />
         </div>
       </div>
       <div id="about">

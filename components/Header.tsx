@@ -6,6 +6,7 @@ import Link from 'next/link'
 import React, { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { FaBars, FaTimes, FaChevronDown, FaChevronRight } from 'react-icons/fa'
+import { useRouter } from 'next/navigation';
 
 const navLinks = [
   { label: "About", href: "/about" },
@@ -31,7 +32,11 @@ const navLinks = [
   },
 ];
 
+
+
 function Header() {
+    const router = useRouter();
+
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [openDropdown, setOpenDropdown] = useState<string | null>(null)
   const [openMobileAccordion, setOpenMobileAccordion] = useState<string | null>(null)
@@ -73,7 +78,7 @@ function Header() {
 
   return (
     <div className='w-full sticky top-0 z-50 bg-gradient-to-r from-[#2a2a2a]/5 via-[#2a2a2a]/5 to-[#4a4a4a]/5 backdrop-blur-sm flex justify-between items-center px-4 md:px-14 py-3 md:py-4 shadow-lg'>
-      <div className='flex items-center gap-2 min-w-0'>
+      <div className='flex items-center gap-2 min-w-0 cursor-pointer' onClick={() => router.push("/")}>
         <Image
           src={logo}
           width={38}

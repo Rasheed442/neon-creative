@@ -5,11 +5,13 @@ import { motion } from 'framer-motion';
 interface HeroProps {
   onNext: () => void;
   onPrev: () => void;
+  onViewWork: () => void;
+  onRequestQuote: () => void;
 }
 
-function Hero({ onNext, onPrev }: HeroProps) {
+function Hero({ onNext, onPrev, onViewWork, onRequestQuote }: HeroProps) {
   return (
-    <div className='relative px-4 md:px-12 flex items-center h-[89vh]  md:pt-16'>
+    <div className='relative px-4 md:px-12 flex items-center min-h-[89vh] md:pt-16'>
       <motion.div
         className='flex flex-col gap-4 w-full md:w-[61%]'
         initial={{ opacity: 0, x: -50 }}
@@ -60,14 +62,26 @@ function Hero({ onNext, onPrev }: HeroProps) {
           From luxury kitchens and custom wardrobes to complete home finishing, we design and build timeless interiors tailored to your lifestyle.
         </motion.p>
         <motion.div
-          className='flex flex-col sm:flex-row items-center gap-4 py-4 pt-8 md:pt-14'
+          className='flex flex-col sm:flex-row items-center gap-4 py-4 pt-8 md:pt-14 '
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8, duration: 0.6 }}
         >
           
-          <button className='bg-[#E1AD56] text-black px-6 py-3 rounded-sm font-medium flex items-center text-white gap-2 w-full sm:w-auto justify-center'>View Our Work <FaArrowRight size={16} /></button>
-          <button className='text-black px-6 py-3 rounded border border-gray-100 text-white font-medium w-full sm:w-auto'>Request a Quote</button>
+          <button
+            type="button"
+            onClick={onViewWork}
+            className='bg-[#E1AD56] cursor-pointer px-6 py-3 rounded-sm font-medium flex items-center text-white gap-2 w-full sm:w-auto shrink-0 whitespace-nowrap justify-center'
+          >
+            View Our Work <FaArrowRight size={16} />
+          </button>
+          <button
+            type="button"
+            onClick={onRequestQuote}
+            className='cursor-pointer px-6 py-3 rounded border border-gray-100 text-white font-medium w-full sm:w-auto shrink-0 whitespace-nowrap'
+          >
+            Request a Quote
+          </button>
         </motion.div>
       </motion.div>
 

@@ -38,6 +38,7 @@ function FeaturedProjects() {
 
   return (
     <motion.div 
+      id="featured-projects"
       className="w-full bg-[#F7F4EF] px-4 md:px-14 py-12 md:py-24"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
