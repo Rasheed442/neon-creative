@@ -31,7 +31,7 @@ function Footer() {
       transition={{ duration: 0.6 }}
     >
       <motion.div 
-        className="flex flex-col md:flex-row justify-between gap-8 md:gap-18 pb-8 md:pb-12"
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 pb-8 md:pb-12"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -39,15 +39,15 @@ function Footer() {
       >
         {/* Brand */}
         <motion.div 
-          className="flex flex-col gap-4 w-full md:w-auto"
+          className="flex flex-col gap-4 w-full min-w-0 md:w-auto"
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
         >
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 min-w-0">
             <Image src={logo} width={35} height={35} alt="" className="md:w-[40px] md:h-[40px]" />
-            <p className="text-white font-semibold text-[13px] md:text-[16px] font-serif">
+            <p className="min-w-0 text-white font-semibold text-[13px] md:text-[16px] font-serif">
               NEON CREATIVE DESIGN LIMITED.
             </p>
           </div>
@@ -59,7 +59,7 @@ function Footer() {
 
         {/* Quick Links */}
         <motion.div 
-          className="flex flex-col gap-4 w-full md:w-auto"
+          className="flex flex-col gap-4 w-full min-w-0 md:w-auto"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -88,7 +88,7 @@ function Footer() {
 
         {/* Contact Us */}
         <motion.div 
-          className="flex flex-col gap-4 w-full md:w-auto"
+          className="flex flex-col gap-4 w-full min-w-0 md:w-auto"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -104,14 +104,14 @@ function Footer() {
             ].map((item, i) => (
               <motion.div 
                 key={i}
-                className="flex items-center gap-3"
+                className="flex items-center gap-3 min-w-0"
                 initial={{ opacity: 0, x: -10 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: 0.4 + (i * 0.05) }}
               >
                 {item.icon}
-                <p className="text-gray-400 text-[13px] md:text-[15px]">{item.text}</p>
+                <p className="min-w-0 break-words text-gray-400 text-[13px] md:text-[15px]">{item.text}</p>
               </motion.div>
             ))}
           </div>
@@ -119,7 +119,7 @@ function Footer() {
 
         {/* Follow Us + Hours */}
         <motion.div 
-          className="flex flex-col gap-4 w-full md:w-auto"
+          className="flex flex-col gap-4 w-full min-w-0 md:w-auto"
           initial={{ opacity: 0, x: 30 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}

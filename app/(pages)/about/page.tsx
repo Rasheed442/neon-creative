@@ -33,10 +33,10 @@ function page() {
   {/* Hero text */}
                 <div className="relative z-10 min-h-[60vh] flex flex-col items-center justify-end text-center px-4">
                 <h2 className="font-serif text-white text-[32px] font-semibold md:text-[44px] lg:text-[56px]">
-                  Bathroom Vanities
+                  About Neon Creative Design Limited
                 </h2>
-                <p className="text-gray-300 text-[14px] md:text-[17px] mt-4 ">
-                  Customised bathroom cabinets in your style, make your bathroom a total refresh look.
+                <p className="text-gray-300 text-[14px] md:text-[18px] mt-4 max-w-5xl ">
+                   We specialize in creating elegant kitchens, bespoke wardrobes, TV units, storage solutions, and complete interior finishing that combine beauty with functionality.
                 </p>
               </div>
 

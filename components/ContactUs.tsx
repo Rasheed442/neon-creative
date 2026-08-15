@@ -94,8 +94,8 @@ function ContactUs() {
 
   return (
     <div>
-           <section className="bg-white py-20 md:py-28 px-4 md:px-14">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
+           <section className="bg-white py-16 md:py-28 px-4 md:px-14">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-10 md:gap-16 items-center">
         {/* Left: Form */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -203,7 +203,7 @@ function ContactUs() {
   whileInView={{ opacity: 1, y: 0 }}
   viewport={{ once: true }}
   transition={{ duration: 0.6, delay: 0.15 }}
-  className="relative w-full h-[400px] md:h-[560px]"
+  className="relative w-full h-[400px] sm:h-[560px] md:h-[600px]"
 >
   {/* Offset accent panel — painted first, sits behind by DOM order alone */}
   <div className="absolute left-[-16px] top-6 bottom-6 w-16 md:w-20 bg-[#E1AD56]" />

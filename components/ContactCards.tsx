@@ -40,7 +40,7 @@ const contactCards = [
 function ContactCards() {
   return (
     <section className="bg-[#f7f3ee] py-16 md:py-20 px-4 md:px-14">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-5">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
         {contactCards.map((card, index) => {
           const Icon = card.icon
           return (
@@ -50,7 +50,7 @@ function ContactCards() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className={`${card.bg} rounded-lg p-8 flex flex-col justify-between min-h-[300px]`}
+              className={`${card.bg} rounded-lg p-6 md:p-8 flex flex-col justify-between min-h-[260px] md:min-h-[300px]`}
             >
               <div
                 className={`${card.iconBg} w-12 h-12 rounded-lg flex items-center justify-center text-white text-lg`}

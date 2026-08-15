@@ -138,12 +138,12 @@ function VisionMission() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 gap-6 place-items-center sm:grid-cols-2 lg:grid-cols-2 sm:px-2 md:px-6 lg:px-14">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:px-2 md:px-6 lg:px-14">
           {features.map((feature, i) => {
             return (
               <motion.div
                 key={i}
-                className="bg-[#242424] rounded p-4 sm:p-5 md:p-6 md:py-10 flex flex-col gap-4 sm:flex-row sm:items-start"
+                className="w-full h-full bg-[#242424] rounded p-4 sm:p-5 md:p-6 md:py-10 flex flex-col gap-4 sm:flex-row sm:items-start"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
