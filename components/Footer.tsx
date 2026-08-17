@@ -15,7 +15,6 @@ import { motion } from 'framer-motion';
 
 const quickLinks = [
   { name: "About", href: "#about" },
-  { name: "Services", href: "#services" },
   { name: "Projects", href: "#projects" },
   { name: "Process", href: "#process" },
   { name: "Contact", href: "#contact" },
@@ -97,10 +96,10 @@ function Footer() {
           <h3 className="text-white font-semibold text-[15px] md:text-[16px]">Contact Us</h3>
           <div className="flex flex-col gap-3">
             {[
-              { icon: <FaPhone className="text-[#E1AD56]" size={14} />, text: "+234 90 7123 4567" },
-              { icon: <FaComment className="text-[#E1AD56]" size={14} />, text: "+234 90 7123 4567" },
-              { icon: <FaEnvelope className="text-[#E1AD56]" size={14} />, text: "hello@craftedinteriors.co.ng" },
-              { icon: <FaLocationDot className="text-[#E1AD56]" size={14} />, text: "Lekki, Lagos" },
+              { icon: <FaPhone className="text-[#E1AD56]" size={14} />, text: "09119990003" },
+              { icon: <FaComment className="text-[#E1AD56]" size={14} />, text: "09119990008" },
+              { icon: <FaEnvelope className="text-[#E1AD56]" size={14} />, text: "hello@neonhomeafrica.com" },
+              { icon: <FaLocationDot className="text-[#E1AD56]" size={14} />, text: "186a Igbosere Road Lagos Island" },
             ].map((item, i) => (
               <motion.div 
                 key={i}

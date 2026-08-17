@@ -3,8 +3,10 @@
 import { ctabg } from "@/contants";
 import { FaArrowRight } from "react-icons/fa6";
 import { motion } from 'framer-motion';
+import { useRouter } from "next/navigation";
 
 function CallToAction() {
+  const router = useRouter()
   return (
     <motion.div
       className="relative w-full h-[400px] md:h-[500px] lg:h-[600px] bg-cover bg-center flex items-center justify-center"
@@ -62,7 +64,8 @@ function CallToAction() {
         </motion.p>
 
         <motion.button 
-          className="mt-6 md:mt-8 bg-[#E1AD56] text-white px-6 md:px-8 py-3 md:py-4 rounded-sm font-medium flex items-center gap-2"
+        onClick={()=>router.push("/contact")}
+          className="mt-6 md:mt-8 bg-[#E1AD56] cursor-pointer text-white px-6 md:px-8 py-3 md:py-4 rounded-sm font-medium flex items-center gap-2"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

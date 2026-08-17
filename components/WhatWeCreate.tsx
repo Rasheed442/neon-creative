@@ -1,30 +1,37 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa6";
 import { Kitchen, Wardrobe, Ceiling, Stone } from "@/contants";
 import { motion } from 'framer-motion';
+
+const MotionLink = motion.create(Link);
 
 const services = [
   {
     image: Kitchen,
     title: "Custom Kitchens",
     description: "Modern & classic kitchen cabinetry built to maximize space and functionality.",
+    href: "/custom-kitchen",
   },
   {
     image: Wardrobe,
     title: "Wardrobes",
     description: "Walk-in closets, sliding wardrobes, fitted wardrobes, and custom storage.",
+    href: "/bedroom",
   },
   {
     image: Ceiling,
     title: "Home Finishing",
     description: "Interior woodworks, TV consoles, shelving, wall panels, & bespoke furniture.",
+    href: "/whole-house-solution",
   },
   {
     image: Stone,
     title: "Interior Consultation",
     description: "Design consultation, space planning, material selection, and project guidance.",
+    href: "/contact",
   },
 ];
 
@@ -91,13 +98,14 @@ function WhatWeCreate() {
               </h3>
               <p className="text-gray-300 text-[13px] md:text-[15px]">{service.description}</p>
 
-              <motion.button 
+              <MotionLink
+                href={service.href}
                 className="mt-4 bg-[#E1AD56] text-white px-6 py-3 rounded-sm font-medium flex items-center gap-2"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 Explore Collection <FaArrowRight size={14} />
-              </motion.button>
+              </MotionLink>
             </div>
           </motion.div>
         ))}
