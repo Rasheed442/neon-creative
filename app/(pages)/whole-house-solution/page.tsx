@@ -14,38 +14,23 @@ function Page() {
 
   const faqs = [
     {
-      question: "What are Custom Kitchen Cabinets",
+      question: "What is a Whole house customized design?",
       answer:
-        "Custom kitchen cabinets are built to order and tailored to the specific requirements of your kitchen from a kitchen cabinet manufacturer. Custom cabinets are not mass-produced in standard sizes, shapes, and finishes compared to pre-made cabinets. Instead, they are designed and crafted to suit your needs, preferences, and space. It means that every aspect of the cabinet, from the materials used to the size and style, is entirely customizable to your liking."
+        ""
     },
     {
-      question: "Types of Custom Cabinetry",
+      question: "What is the proccess of getting a whole house cutomized design?",
       answer: ""
     },
     {
-      question: "What is your cancellation policy?",
+      question: "How long does a Whole-house customized design project take?",
       answer: ""
     },
     {
-      question: "Can other info be added to an invoice?",
+      question: "What is the cost of a whole-house customized design",
       answer: ""
     },
-    {
-      question: "How does billing work?",
-      answer: ""
-    },
-    {
-      question: "How do I change my account email?",
-      answer: ""
-    },
-    {
-      question: "How do I change my account email?",
-      answer: ""
-    },
-    {
-      question: "How do I change my account email?",
-      answer: ""
-    }
+  
   ];
 
   const [openIndices, setOpenIndices] = useState<Set<number>>(new Set([0]));
@@ -221,8 +206,8 @@ function Page() {
           FAQs about Whole House Solution
         </h2>
         <p className="text-[#2E2E2E] text-[14px] md:text-[14px] mt-4 leading-relaxed">
-          Explore Oppolia’s premium interior doors, designed to fit every style and budget. With modern, classic, and custom options,
-           you can create the perfect entrance for any room in your home.
+         Whole house design refers to the comprehensive planning and coordination of architectural, interior, and landscaping
+          elements of a residential property. It involves integrating various aspects of design to create a cohesive and harmonious living environment that meets the functional and aesthetic needs of the homeowners.
         </p>
       </div>
 

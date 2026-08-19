@@ -19,42 +19,42 @@ function Page() {
 
 const faqs = [
   {
-    question: "What are Custom Kitchen Cabinets",
+    question: "What types of Bathroom  do you offer?",
     answer:
-      "Custom kitchen cabinets are built to order and tailored to the specific requirements of your kitchen from a kitchen cabinet manufacturer. Custom cabinets are not mass-produced in standard sizes, shapes, and finishes compared to pre-made cabinets. Instead, they are designed and crafted to suit your needs, preferences, and space. It means that every aspect of the cabinet, from the materials used to the size and style, is entirely customizable to your liking.",
+      "We offer a range of modern bathroom styles designed for durability, natural light, ventilation, and contemporary interiors.",
   },
   {
-    question: "Types of Custom Cabinetry",
-    answer:
-      "",
-  },
-  {
-    question: "What is your cancellation policy?",
+    question: "Can I customize the size and design of my Bathroom?",
     answer:
       "",
   },
   {
-    question: "Can other info be added to an invoice?",
+    question: "What materials are your windows and doors made from?",
     answer:
       "",
   },
   {
-    question: "How does billing work?",
+    question: "Are your doors suitable for bathrooms?",
     answer:
       "",
   },
   {
-    question: "How do I change my account email?",
+    question: "Do you offer installation services?",
     answer:
       "",
   },
   {
-    question: "How do I change my account email?",
+    question: "Are your Bathroom energy efficient?",
     answer:
       "",
   },
   {
-    question: "How do I change my account email?",
+    question: "Can I match my windows and doors to my bathroom vanity?",
+    answer:
+      "",
+  },
+  {
+    question: "How do I choose the right Bathroom for my space?",
     answer:
       "",
   },

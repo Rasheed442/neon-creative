@@ -14,38 +14,46 @@ function Page() {
 
   const faqs = [
     {
-      question: "What are Custom Kitchen Cabinets",
+      question: "What types of windows do you offer?",
       answer:
-        "Custom kitchen cabinets are built to order and tailored to the specific requirements of your kitchen from a kitchen cabinet manufacturer. Custom cabinets are not mass-produced in standard sizes, shapes, and finishes compared to pre-made cabinets. Instead, they are designed and crafted to suit your needs, preferences, and space. It means that every aspect of the cabinet, from the materials used to the size and style, is entirely customizable to your liking."
+        ""
     },
     {
-      question: "Types of Custom Cabinetry",
+      question: "What types of doors do you provide?",
       answer: ""
     },
     {
-      question: "What is your cancellation policy?",
+      question: "Can you make custom-sized windows and doors?",
       answer: ""
     },
     {
-      question: "Can other info be added to an invoice?",
+      question: "What materials do you use?",
       answer: ""
     },
     {
-      question: "How does billing work?",
+      question: "How do I know which window or door is right for my home?",
       answer: ""
     },
     {
-      question: "How do I change my account email?",
+      question: "Do you provide installation services?",
       answer: ""
     },
     {
-      question: "How do I change my account email?",
+      question: "Are your windows and doors easy to maintain?",
       answer: ""
     },
     {
-      question: "How do I change my account email?",
+      question: "Can you replace my existing windows or doors?",
       answer: ""
-    }
+    },
+    {
+      question: "Do your windows and doors improve security?",
+      answer: ""
+    },
+    {
+      question: "How do I request a quote?",
+      answer: ""
+    },
   ];
 
   const [openIndices, setOpenIndices] = useState<Set<number>>(new Set([0]));
@@ -218,11 +226,10 @@ function Page() {
 
       <div className="max-w-3xl mx-auto text-center py-10 md:py-16 px-4">
         <h2 className="font-serif text-[#1f2440] text-[26px] sm:text-[32px] md:text-[38px] leading-tight">
-          FAQs about Modern Interior Door
+          FAQs about Modern Doors & Windows
         </h2>
         <p className="text-[#2E2E2E] text-[14px] md:text-[15px] mt-4">
-          Explore Oppolia’s premium interior doors, designed to fit every style and budget. With modern, classic, and custom options, 
-          you can create the perfect entrance for any room in your home.
+         Explore Neon Creative’s premium interior doors, designed to fit every style and budget. With modern, classic, and custom options, you can create the perfect entrance for any room in your home.
         </p>
       </div>
 

@@ -21,42 +21,42 @@ function Page() {
 
 const faqs = [
   {
-    question: "What are Custom Kitchen Cabinets",
+    question: "Can I customize my wardrobe to fit my bedroom?",
     answer:
-      "Custom kitchen cabinets are built to order and tailored to the specific requirements of your kitchen from a kitchen cabinet manufacturer. Custom cabinets are not mass-produced in standard sizes, shapes, and finishes compared to pre-made cabinets. Instead, they are designed and crafted to suit your needs, preferences, and space. It means that every aspect of the cabinet, from the materials used to the size and style, is entirely customizable to your liking.",
+      "Yes. Our wardrobes can be customized to match your room size, layout, storage needs, and preferred style.",
   },
   {
-    question: "Types of Custom Cabinetry",
-    answer:
-      "",
-  },
-  {
-    question: "What is your cancellation policy?",
+    question: "What wardrobe styles do you offer?",
     answer:
       "",
   },
   {
-    question: "Can other info be added to an invoice?",
+    question: "Can I choose the wardrobe color and finish?",
     answer:
       "",
   },
   {
-    question: "How does billing work?",
+    question: "Do you design wardrobes for small bedrooms?",
     answer:
       "",
   },
   {
-    question: "How do I change my account email?",
+    question: "Can the vanity include built-in lighting?",
     answer:
       "",
   },
   {
-    question: "How do I change my account email?",
+    question: "How much storage space can I get?",
     answer:
       "",
   },
   {
-    question: "How do I change my account email?",
+    question: "Do you provide wardrobe installation?",
+    answer:
+      "",
+  },
+  {
+    question: "How long does it take to complete a wardrobe?",
     answer:
       "",
   },
