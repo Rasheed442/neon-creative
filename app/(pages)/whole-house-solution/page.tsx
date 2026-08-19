@@ -10,7 +10,7 @@ import CallToAction from "@/components/CallToAction";
 import Footer from "@/components/Footer";
 
 function Page() {
-  const categories = ["All", "Whole House Solution"];
+  const categories = ["All", "Whole House Solution", "Apartments", "Villas"];
 
   const faqs = [
     {
@@ -65,34 +65,34 @@ function Page() {
       image: whbgimages.wh1,
       label:
         "ONE STOP TO GET WHOLE HOUSE FURNITURE.",
-      category: "Custom Wardrobes"
+      categories: ["Whole House Solution", "Apartments"]
     },
     {
       image: whbgimages.wh2,
       label:
         "Cilan Series Modern Elegance Italian Style Contemporary Interior Design – OB24AP03",
-      category: "Built In Wardrobes"
+      categories: ["Whole House Solution", "Apartments"]
     },
     {
       image: whbgimages.wh3,
       label: "Como Series Modern Beige and Walnut Whole-House Design",
-      category: "Walk in Closet"
+      categories: ["Whole House Solution", "Apartments"]
     },
     {
       image: whbgimages.wh4,
       label:
         "Contemporary Home Design with Custom Joinery OB23-Villa01",
-      category: "Hinge Door Wardrobe"
+      categories: ["Whole House Solution", "Villas"]
     },
     {
       image: whbgimages.wh5,
       label: "Cream Interior Design Warm White Fitted Furniture OB23-Apart02",
-      category: "Sliding Door Wardrobe"
+      categories: ["Whole House Solution", "Villas"]
     },
     {
       image: whbgimages.wh6,
       label: "Cybel Series Modern Whole House Interior Design – OB24AP09",
-      category: "Sliding Door Wardrobe"
+      categories: ["Whole House Solution", "Villas"]
     }
   ];
 
@@ -100,7 +100,7 @@ function Page() {
   const filteredProjects =
     activeCategory === "All"
       ? projects
-      : projects.filter((p) => p.category === activeCategory);
+      : projects.filter((p) => p.categories.includes(activeCategory));
 
   return (
     <div>

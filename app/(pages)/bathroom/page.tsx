@@ -2,14 +2,14 @@
 
 import Header from '@/components/Header'
 import Image from 'next/image'
-import { cust2, cust1,cust3, kitchbg, cust6, cust5, cust4, bedroomImages, bathimages } from '@/contants'
+import { bathimages } from '@/contants'
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaBoxOpen, FaMinus, FaPlus } from 'react-icons/fa';
 import { useState } from 'react';
 import CallToAction from '@/components/CallToAction';
 import Footer from '@/components/Footer';
 
-function page() {
+function Page() {
     const categories = [
   "All",
   "Wall Mounted & Floating",
@@ -77,32 +77,32 @@ const projects = [
   {
     image: bathimages.bath1,
     label: "Cilan Series Red Light Luxury Bathroom Cabinet Floating Vanity – OBV24P01",
-    category: "Custom Wardrobes",
+    categories: ["Wall Mounted & Floating", "Free Standing"],
   },
   {
     image: bathimages.bath2,
     label: "Cloud Series Modern Luxury Bathroom Cabinet Floating Vanity – OBV24L02",
-    category: "Built In Wardrobes",
+    categories: ["Wall Mounted & Floating", "Free Standing"],
   },
   {
     image: bathimages.bath3,
     label: "Contemporary Floating Bathroom Vanity with LED Mirror Cabinet – OBV24L05",
-    category: "Walk in Closet",
+    categories: ["Wall Mounted & Floating", "Free Standing"],
   },
   {
     image: bathimages.bath4,
     label: "Modern Floating Bathroom Vanity with LED Mirror – OBV24L04",
-    category: "Hinge Door Wardrobe",
+    categories: ["Wall Mounted & Floating", "Free Standing"],
   },
   {
     image: bathimages.bath5,
     label: "Modern Floating Vanity in Textured Melamine Finish OBV23-M01",
-    category: "Sliding Door Wardrobe",
+    categories: ["Wall Mounted & Floating", "Free Standing"],
   },
   {
     image: bathimages.bath6,
     label: "Modern Gray Wall-Mounted Bathroom Vanity with Mirror Cabinet – OBV24L03",
-    category: "Sliding Door Wardrobe",
+    categories: ["Wall Mounted & Floating", "Free Standing"],
   }
 
 ]
@@ -111,7 +111,7 @@ const projects = [
   const filteredProjects =
     activeCategory === "All"
       ? projects
-      : projects.filter((p) => p.category === activeCategory);
+      : projects.filter((p) => p.categories.includes(activeCategory));
 
   return (
     <div>
@@ -278,4 +278,4 @@ const projects = [
   )
 }
 
-export default page
+export default Page

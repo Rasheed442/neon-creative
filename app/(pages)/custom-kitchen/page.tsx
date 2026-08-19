@@ -9,7 +9,7 @@ import { useState } from 'react';
 import CallToAction from '@/components/CallToAction';
 import Footer from '@/components/Footer';
 
-function page() {
+function Page() {
     const categories = [
   "All",
   "Modern Kitchens",
@@ -20,48 +20,76 @@ function page() {
   "T Shape Kitchens",
 ];
 
-const faqs = [
+const projects = [
   {
-    question: "What are Custom Kitchen Cabinets",
-    answer:
-      "Custom kitchen cabinets are built to order and tailored to the specific requirements of your kitchen from a kitchen cabinet manufacturer. Custom cabinets are not mass-produced in standard sizes, shapes, and finishes compared to pre-made cabinets. Instead, they are designed and crafted to suit your needs, preferences, and space. It means that every aspect of the cabinet, from the materials used to the size and style, is entirely customizable to your liking.",
+    image: cust1,
+    label: "Airis Series White And Wood Two-Tone Modern Style Kitchen Cabinet – OBK24L02",
+    categories: ["Modern Kitchens", "U Shape Kitchens", "L Shape Kitchens"],
   },
   {
-    question: "Types of Custom Cabinetry",
-    answer:
-      "",
+    image: cust2,
+    label: "Cloud Series Luxury Style Kitchen Cabinets With Lacquer Finish – OBK24L04",
+    categories: ["Modern Kitchens", "Island Kitchens", "Straight Kitchens"],
   },
   {
-    question: "What is your cancellation policy?",
-    answer:
-      "",
+    image: cust3,
+    label: "Como Series Modern Minimalist Semi-Open Kitchen",
+    categories: ["Modern Kitchens", "Island Kitchens", "U Shape Kitchens"],
   },
   {
-    question: "Can other info be added to an invoice?",
-    answer:
-      "",
+    image: cust4,
+    label: "Hull Series Red Modern Minimalist Stylish Kitchen Cabinets – OBK24L03",
+    categories: ["Modern Kitchens", "T Shape Kitchens", "L Shape Kitchens"],
   },
   {
-    question: "How does billing work?",
-    answer:
-      "",
+    image: cust5,
+    label: "Lumi Series Purple Elegant Handleless Kitchen Cabinet – OBK24L07",
+    categories: ["Modern Kitchens", "L Shape Kitchens", "Straight Kitchens"],
   },
   {
-    question: "How do I change my account email?",
-    answer:
-      "",
-  },
-  {
-    question: "How do I change my account email?",
-    answer:
-      "",
-  },
-  {
-    question: "How do I change my account email?",
-    answer:
-      "",
+    image: cust6,
+    label: "Minimalist Elegance Red and Grey Open Concept Kitchen with Island – OBK25L02",
+    categories: ["Modern Kitchens", "Island Kitchens", "T Shape Kitchens"],
   },
 ]
+
+
+  const faqs = [
+    {
+      question: "What are Custom Kitchen Cabinets",
+      answer:
+        "Custom kitchen cabinets are built to order and tailored to the specific requirements of your kitchen from a kitchen cabinet manufacturer. Custom cabinets are not mass-produced in standard sizes, shapes, and finishes compared to pre-made cabinets. Instead, they are designed and crafted to suit your needs, preferences, and space. It means that every aspect of the cabinet, from the materials used to the size and style, is entirely customizable to your liking."
+    },
+    {
+      question: "Types of Custom Cabinetry",
+      answer:
+        "When it comes to custom kitchen cabinets, there are two main types to consider: framed cabinets and frameless cabinets.\n\nFramed Cabinets:\nFramed cabinets are the traditional style of cabinet construction, built with a frame attached to the front of the cabinet box. This frame supports the doors and drawers while adding a decorative element to the cabinet. It can be made from a variety of materials, including solid wood, MDF, or plywood. Framed cabinets are versatile and can be customized to fit both traditional and contemporary styles.\n\nFrameless Cabinets:\nFrameless cabinets, also known as European-style cabinets, represent a more modern approach to cabinet construction. Rather than relying on a front frame, the cabinet box itself is built with thicker side walls that support the doors and drawers directly. This style is popular in contemporary and minimalist kitchens for its sleek, streamlined look, and is typically made from plywood or MDF finished with laminate or veneer."
+    },
+    {
+      question: "What are the popular materials used in custom kitchen cabinets?",
+      answer: "Typically, kitchen cabinets are crafted from premium materials such as wood, medium-density fiberboard (MDF), and high-gloss finishes, ensuring every kitchen achieves a balance of durability, aesthetic appeal, and practical functionality.."
+    },
+    {
+      question: "What design styles are trending for custom kitchen cabinets?",
+      answer: "Please refer to the latest custom cabinet trends guide: Modern Kitchen Design Trends. You can also obtain the latest design guide by downloading our free brochure: Download Catalogues!"
+    },
+    {
+      question: "What is the average cost of custom kitchen cabinets?",
+      answer: "Here’s a breakdown of what you can generally expect to pay for custom kitchen cabinets, along with key factors that drive the cost: For modest size & simpler materials: $7,000–12,000 (or equivalent locally). For a full luxury custom kitchen: $20,000–30,000+ (or higher depending on scope and materials)."
+    },
+    {
+      question: "How do I choose the right custom kitchen cabinets for my space?",
+      answer: "To select the perfect cabinets, consider your style preferences, layout, material, and budget. NEONHOMEAFRICA’s guide helps you make an informed decision tailored to your space and needs."
+    },
+    {
+      question: "Can I get a free consultation for custom kitchen cabinets installation?",
+      answer: "Of course, NEONHOMEAFRICA designers offer complimentary consultation and design services. Whether you make a purchase or not, we provide free consultations.Contact us today!"
+    },
+    {
+      question: "Does NEONHOMEAFRICA offer eco-friendly custom kitchen cabinets?",
+      answer: "Yes, all NEONHOMEAFRICA panels comply with emission class E1, tested with the European chamber method EN717-1, and meet the stringent California Air Resources Board (CARB) emissions standards. We only purchase panels from FSC-certified suppliers, guaranteeing that the wood products that consumers purchase are not coming from questionable sources or from overexploitation, but come from managed semi-natural forests."
+    }
+  ];
 
 
   const [openIndices, setOpenIndices] = useState<Set<number>>(new Set([0]))
@@ -76,44 +104,13 @@ const faqs = [
       return next
     })
   }
-const projects = [
-  {
-    image: cust1,
-    label: "Airis Series White And Wood Two-Tone Modern Style Kitchen Cabinet – OBK24L02",
-    category: "Modern Kitchens",
-  },
-  {
-    image: cust2,
-    label: "Cloud Series Luxury Style Kitchen Cabinets With Lacquer Finish – OBK24L04",
-    category: "Modern Kitchens",
-  },
-  {
-    image: cust3,
-    label: "Como Series Modern Minimalist Semi-Open Kitchen",
-    category: "Island Kitchens",
-  },
-  {
-    image: cust4,
-    label: "Hull Series Red Modern Minimalist Stylish Kitchen Cabinets – OBK24L03",
-    category: "Modern Kitchens",
-  },
-  {
-    image: cust5,
-    label: "Lumi Series Purple Elegant Handleless Kitchen Cabinet – OBK24L07",
-    category: "Modern Kitchens",
-  },
-  {
-    image: cust6,
-    label: "Minimalist Elegance Red and Grey Open Concept Kitchen with Island – OBK25L02",
-    category: "Modern Kitchens",
-  },
-]
+
 
   const [activeCategory, setActiveCategory] = useState("All");
   const filteredProjects =
     activeCategory === "All"
       ? projects
-      : projects.filter((p) => p.category === activeCategory);
+      : projects.filter((p) => p.categories.includes(activeCategory));
 
   return (
     <div>
@@ -232,7 +229,7 @@ const projects = [
     FAQs About Custom Kitchen Cabinets
   </h2>
   <p className="text-[#2E2E2E] text-[14px] md:text-[15px] mt-4">
-    Discover Oppolia’s premium custom kitchen cabinets, designed for every style and layout.
+    Discover NEONHOMEAFRICA’s premium custom kitchen cabinets, designed for every style and layout.
     With a range of materials, finishes, and designs,
     we offer tailored solutions to create your dream kitchen. Start designing your custom kitchen today.
   </p>
@@ -264,7 +261,7 @@ const projects = [
               transition={{ duration: 0.25, ease: "easeInOut" }}
               className="overflow-hidden"
             >
-              <p className="text-gray-500 text-[14px] sm:text-[15px] md:text-[16px] leading-relaxed pb-6 pr-4 sm:pr-8 md:pr-10">
+              <p className="text-gray-500 text-[14px] sm:text-[15px] whitespace-pre-line md:text-[16px] leading-relaxed pb-6 pr-4 sm:pr-8 md:pr-10">
                 {faq.answer}
               </p>
             </motion.div>
@@ -280,4 +277,4 @@ const projects = [
   )
 }
 
-export default page
+export default Page

@@ -2,25 +2,14 @@
 
 import Header from "@/components/Header";
 import Image from "next/image";
-import {
-  cust2,
-  cust1,
-  cust3,
-  kitchbg,
-  cust6,
-  cust5,
-  cust4,
-  bedroomImages,
-  bathimages,
-  dwimages
-} from "@/contants";
+import { dwimages } from "@/contants";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaBoxOpen, FaMinus, FaPlus } from "react-icons/fa";
 import { useState } from "react";
 import CallToAction from "@/components/CallToAction";
 import Footer from "@/components/Footer";
 
-function page() {
+function Page() {
   const categories = ["All", "Interior Doors", "WPC Doors", "Aluminum Doors & Windows"];
 
   const faqs = [
@@ -76,34 +65,34 @@ function page() {
       image: dwimages.dw1,
       label:
         "Brown Walnut Shaker Style WPC Door – YDM003D",
-      category: "Custom Wardrobes"
+      categories: ["Interior Doors", "WPC Doors"]
     },
     {
       image: dwimages.dw2,
       label:
         "French Plane Tree Wood WPC Door – YDM003D",
-      category: "Built In Wardrobes"
+      categories: ["Interior Doors", "WPC Doors"]
     },
     {
       image: dwimages.dw3,
       label: "Gray Flat Interior WPC Door – YDM001D",
-      category: "Walk in Closet"
+      categories: ["Interior Doors", "WPC Doors", "Aluminum Doors & Windows"]
     },
     {
       image: dwimages.dw4,
       label:
         "Gray Oak WPC Interior Door – YDM002D",
-      category: "Hinge Door Wardrobe"
+      categories: ["Interior Doors", "WPC Doors", "Aluminum Doors & Windows"]
     },
     {
       image: dwimages.dw5,
       label: "Modern Beige WPC Interior Door – YDM002D",
-      category: "Sliding Door Wardrobe"
+      categories: ["Interior Doors", "WPC Doors", "Aluminum Doors & Windows"]
     },
     {
       image: dwimages.dw6,
       label: "White Oak Interior WPC Door – YDM001D",
-      category: "Sliding Door Wardrobe"
+      categories: ["Interior Doors", "WPC Doors"]
     }
   ];
 
@@ -111,7 +100,7 @@ function page() {
   const filteredProjects =
     activeCategory === "All"
       ? projects
-      : projects.filter((p) => p.category === activeCategory);
+      : projects.filter((p) => p.categories.includes(activeCategory));
 
   return (
     <div>
@@ -279,4 +268,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;

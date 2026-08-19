@@ -10,7 +10,7 @@ import CallToAction from "@/components/CallToAction";
 import Footer from "@/components/Footer";
 
 function Page() {
-  const categories = ["Furnitures"];
+  const categories = ["All", "Living Room", "Dining Room", "Bedroom", "Storage"];
 
   const faqs = [
     {
@@ -65,34 +65,34 @@ function Page() {
       image: furbgimages.fr1,
       label:
         "Modern Tatami Room Design OBT22-001",
-      category: "Custom Wardrobes"
+      categories: ["Bedroom", "Storage"]
     },
     {
       image: furbgimages.fr2,
       label:
         "High End Luxury Cow Leather Sofa OS-0120019",
-      category: "Built In Wardrobes"
+      categories: ["Living Room", "Bedroom"]
     },
     {
       image: furbgimages.fr3,
       label: "Elegant Solid White Dining Room Table OT-0120032",
-      category: "Walk in Closet"
+      categories: ["Dining Room", "Living Room"]
     },
     {
       image: furbgimages.fr4,
       label:
         "Side Cabinet in High Gloss UV Lacquer Finish BLCG20016-033",
-      category: "Hinge Door Wardrobe"
+      categories: ["Storage", "Living Room"]
     },
     {
       image: furbgimages.fr5,
       label: "Custom Modern Glossy White TV Units BLTV20014-033",
-      category: "Sliding Door Wardrobe"
+      categories: ["Living Room", "Storage"]
     },
     {
       image: furbgimages.fr6,
       label: "Modern Gray Dining Room Table OT-0120045",
-      category: "Sliding Door Wardrobe"
+      categories: ["Dining Room", "Living Room"]
     }
   ];
 
@@ -100,7 +100,7 @@ function Page() {
   const filteredProjects =
     activeCategory === "All"
       ? projects
-      : projects.filter((p) => p.category === activeCategory);
+      : projects.filter((p) => p.categories.includes(activeCategory));
 
   return (
     <div>

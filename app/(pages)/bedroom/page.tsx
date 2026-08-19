@@ -2,14 +2,14 @@
 
 import Header from '@/components/Header'
 import Image from 'next/image'
-import { cust2, cust1,cust3, kitchbg, cust6, cust5, cust4, bedroomImages } from '@/contants'
+import { bedroomImages } from '@/contants'
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaBoxOpen, FaMinus, FaPlus } from 'react-icons/fa';
 import { useState } from 'react';
 import CallToAction from '@/components/CallToAction';
 import Footer from '@/components/Footer';
 
-function page() {
+function Page() {
     const categories = [
   "All",
   "Custom Wardrobes",
@@ -79,32 +79,32 @@ const projects = [
   {
     image: bedroomImages.be1,
     label: "Cilan Series Modern Elegance Two Tone Italian Wardrobe – OBW24L04",
-    category: "Custom Wardrobes",
+    categories: ["Custom Wardrobes", "Built In Wardrobes", "Hinge Door Wardrobe"],
   },
   {
     image: bedroomImages.be2,
     label: "Cloud Series Luxury Modern Bedroom Wardrobe With Island – OBW24L05",
-    category: "Built In Wardrobes",
+    categories: ["Custom Wardrobes", "Built In Wardrobes", "Walk in Closet"],
   },
   {
     image: bedroomImages.be3,
     label: "Dark Grey Custom Built-in Closet with Island OBW23-M04",
-    category: "Walk in Closet",
+    categories: ["Custom Wardrobes", "Built In Wardrobes", "Walk in Closet"],
   },
   {
     image: bedroomImages.be4,
     label: "Light Grey Wardrobe in Leather Textured PVC Finish OBW23-PVC03",
-    category: "Hinge Door Wardrobe",
+    categories: ["Custom Wardrobes", "Hinge Door Wardrobe", "Sliding Door Wardrobe"],
   },
   {
     image: bedroomImages.be5,
     label: "Minimalist Elegance Bedroom with Walk-in Closet – OBW25L02",
-    category: "Sliding Door Wardrobe",
+    categories: ["Custom Wardrobes", "Walk in Closet", "Sliding Door Wardrobe"],
   },
   {
     image: bedroomImages.be6,
     label: "Modern Luxury Closet in Dark Grey and Dark Wood OBW23-L07",
-    category: "Sliding Door Wardrobe",
+    categories: ["Custom Wardrobes", "Built In Wardrobes", "Sliding Door Wardrobe"],
   }
 
 ]
@@ -113,7 +113,7 @@ const projects = [
   const filteredProjects =
     activeCategory === "All"
       ? projects
-      : projects.filter((p) => p.category === activeCategory);
+      : projects.filter((p) => p.categories.includes(activeCategory));
 
   return (
     <div>
@@ -280,4 +280,4 @@ const projects = [
   )
 }
 
-export default page
+export default Page
