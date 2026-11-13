@@ -17,6 +17,8 @@ const navLinks = [
       { label: "Custom Kitchen", href: "/custom-kitchen" },
       { label: "Bedroom", href: "/bedroom" },
       { label: "Bathroom", href: "/bathroom" },
+      { label: "Dining", href: "/dining" },
+
       { label: "Doors & Windows", href: "/door-windows" },
       { label: "Whole House Solution", href: "/whole-house-solution" },
       { label: "Furniture", href: "/furniture" },
@@ -35,7 +37,7 @@ const navLinks = [
 
 
 function Header() {
-    const router = useRouter();
+  const router = useRouter();
 
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [openDropdown, setOpenDropdown] = useState<string | null>(null)
@@ -110,9 +112,8 @@ function Header() {
               >
                 {link.label}
                 <FaChevronDown
-                  className={`text-xs transition-transform duration-200 ${
-                    openDropdown === link.label ? "rotate-180" : ""
-                  }`}
+                  className={`text-xs transition-transform duration-200 ${openDropdown === link.label ? "rotate-180" : ""
+                    }`}
                 />
               </button>
             ) : (
@@ -220,9 +221,8 @@ function Header() {
                   >
                     {link.label}
                     <FaChevronDown
-                      className={`text-base transition-transform duration-200 ${
-                        openMobileAccordion === link.label ? "rotate-180" : ""
-                      }`}
+                      className={`text-base transition-transform duration-200 ${openMobileAccordion === link.label ? "rotate-180" : ""
+                        }`}
                     />
                   </button>
                 ) : (

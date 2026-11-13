@@ -107,11 +107,21 @@ import ctbg from "@/assets/Images/contact-us/ctbg.png"
 import cont from "@/assets/Images/contact-us/cont.png"
 
 
-export const ctbgImages = { 
+
+// DINING
+import DiningBG from "../assets/Images/Dining/DiningBG.png"
+import din1 from "../assets/Images/Dining/din1.png"
+import din2 from "../assets/Images/Dining/din2.png"
+import din3 from "../assets/Images/Dining/din3.png"
+import din4 from "../assets/Images/Dining/din4.png"
+
+
+
+export const ctbgImages = {
     ctbg,
     cont
 }
-export const consultationImages = { 
+export const consultationImages = {
     consultationImg,
 }
 export const bedroomImages = {
@@ -124,40 +134,49 @@ export const bedroomImages = {
     be6,
 };
 export const bathimages = {
-   bathbg,
-   bath1,
-   bath2,
-   bath3,
-   bath4,
-   bath5,
-   bath6,
+    bathbg,
+    bath1,
+    bath2,
+    bath3,
+    bath4,
+    bath5,
+    bath6,
+};
+export const DiningBGimages = {
+    DiningBG,
+    bath1,
+    bath2,
+    bath3,
+    bath4,
+    bath5,
+    bath6,
 };
 export const dwimages = {
-  dwbg,
-  dw1,
-  dw2,
-  dw3,
-  dw4,
-  dw5,
-  dw6,
+    dwbg,
+    dw1,
+    dw2,
+    dw3,
+    dw4,
+    dw5,
+    dw6,
 };
 export const whbgimages = {
-  whbg,
-  wh1,
-  wh2,
-  wh3,
-  wh4,
-  wh5,
-  wh6,
+    whbg,
+    wh1,
+    wh2,
+    wh3,
+    wh4,
+    wh5,
+    wh6,
 };
 export const furbgimages = {
-furbg,
-fr1,
-fr2,
-fr3,
-fr4,
-fr5,
-fr6
+    furbg,
+    fr1,
+    fr2,
+    fr3,
+    fr4,
+    fr5,
+    fr6
 };
 
 
@@ -176,5 +195,5 @@ export const cpbgimages = {
 
 
 
-export const heroImages = [herobg1, herobg2, herobg3, herobg4,herobg5,herobg6];
-export { logo,about, Kitchen, Wardrobe, Ceiling, Stone, bedroom, saldine, dining,youtube, kitchbg,cust3,cust4, cust5,cust6, livingromm, modkitchen,ctabg,cust1,cust2 }
+export const heroImages = [herobg1, herobg2, herobg3, herobg4, herobg5, herobg6];
+export { logo, about, Kitchen, Wardrobe, Ceiling, Stone, bedroom, saldine, dining, youtube, kitchbg, cust3, cust4, cust5, cust6, livingromm, modkitchen, ctabg, cust1, cust2 }
