@@ -544,19 +544,49 @@ export const tvCabinetFaqs: FAQItem[] = [
 
 export const wallPanelFaqs: FAQItem[] = [
   {
-    question: "What types of wall panelling do you offer?",
+    question: "1. What types of wall panels do you offer?",
     answer:
-      "We offer acoustic slatted wood panels, upholstered fabric panels, 3D fluted panels, mirrored and metallic feature trims, and floor-to-ceiling veneered boiserie.",
+      "We offer fluted and slatted wood panels, flat veneer panels, upholstered and soft panels, stone-effect panels and panels with metal inlays, so you can create anything from a subtle texture to a bold feature wall.",
   },
   {
-    question: "Can wall panels hide concealed doors and secret rooms?",
+    question: "2. Where can wall panels be used?",
     answer:
-      "Yes. We specialize in flush-fit hidden doors (jib doors) that seamlessly blend into the continuous wall panelling pattern.",
+      "Wall panels work beautifully as feature walls in living rooms, headboard walls in bedrooms, TV walls, dining rooms, corridors and staircases, as well as offices, reception areas and commercial spaces.",
   },
   {
-    question: "Do wall panels help with sound insulation?",
+    question: "3. Can wall panels hide uneven walls or wiring?",
     answer:
-      "Yes. Our acoustic slatted and upholstered wall panels significantly reduce echo and sound reverberation in bedrooms, media rooms, and living areas.",
+      "Yes. Panels are mounted on a framework that can conceal minor wall imperfections, cables and conduits, giving you a perfectly finished surface.",
+  },
+  {
+    question: "4. Are wall panels suitable for humid areas?",
+    answer:
+      "Yes. We offer moisture-resistant panel options for areas exposed to humidity, and we advise on the best material for each room.",
+  },
+  {
+    question: "5. Can lighting be built into wall panels?",
+    answer:
+      "Yes. We can add LED grooves, backlighting and wall-washer lighting to panels, creating depth and a warm, premium atmosphere.",
+  },
+  {
+    question: "6. Do wall panels improve acoustics?",
+    answer:
+      "Slatted panels with acoustic backing and upholstered panels help absorb sound and reduce echo, which is ideal for living rooms, home cinemas, studies and offices.",
+  },
+  {
+    question: "7. How are wall panels installed?",
+    answer:
+      "We install panels on battens or concealed fixing systems for a seamless finish, usually with minimal disruption to the rest of your home.",
+  },
+  {
+    question: "8. Can panels match my doors and cabinetry?",
+    answer:
+      "Yes. We can match finishes across panels, doors and cabinetry, and even create concealed doors that sit flush within the panelled wall.",
+  },
+  {
+    question: "9. How do I clean and maintain wall panels?",
+    answer:
+      "Dust regularly with a soft, dry cloth and wipe gently with a slightly damp cloth when needed. Avoid harsh chemicals and abrasive cleaners, especially on wood veneer and upholstered panels.",
   },
 ]
 
