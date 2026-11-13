@@ -4,75 +4,18 @@ import Header from '@/components/Header'
 import Image from 'next/image'
 import { bathimages } from '@/contants'
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaBoxOpen, FaMinus, FaPlus } from 'react-icons/fa';
+import { FaBoxOpen } from 'react-icons/fa';
 import { useState } from 'react';
 import CallToAction from '@/components/CallToAction';
 import Footer from '@/components/Footer';
+import FAQ, { bathroomFaqs } from '@/components/Faq';
 
 function Page() {
   const categories = [
     "All",
     "Wall Mounted & Floating",
     "Free Standing",
-
   ];
-
-  const faqs = [
-    {
-      question: "What types of Bathroom  do you offer?",
-      answer:
-        "We offer a range of modern bathroom styles designed for durability, natural light, ventilation, and contemporary interiors.",
-    },
-    {
-      question: "Can I customize the size and design of my Bathroom?",
-      answer:
-        "",
-    },
-    {
-      question: "What materials are your windows and doors made from?",
-      answer:
-        "",
-    },
-    {
-      question: "Are your doors suitable for bathrooms?",
-      answer:
-        "",
-    },
-    {
-      question: "Do you offer installation services?",
-      answer:
-        "",
-    },
-    {
-      question: "Are your Bathroom energy efficient?",
-      answer:
-        "",
-    },
-    {
-      question: "Can I match my windows and doors to my bathroom vanity?",
-      answer:
-        "",
-    },
-    {
-      question: "How do I choose the right Bathroom for my space?",
-      answer:
-        "",
-    },
-  ]
-
-
-  const [openIndices, setOpenIndices] = useState<Set<number>>(new Set([0]))
-  const toggle = (index: number) => {
-    setOpenIndices((prev) => {
-      const next = new Set(prev)
-      if (next.has(index)) {
-        next.delete(index)
-      } else {
-        next.add(index)
-      }
-      return next
-    })
-  }
   const projects = [
     {
       image: bathimages.bath1,
@@ -223,54 +166,12 @@ function Page() {
         )}
       </div>
 
-      <div className="max-w-3xl mx-auto text-center py-10 md:py-16 px-4">
-
-        <h2 className="font-serif text-[#1f2440] text-[26px] sm:text-[32px] md:text-[38px] leading-tight">
-          FAQs about Modern Bathroom Vanity
-        </h2>
-        <p className="text-[#2E2E2E] text-[14px] md:text-[15px] mt-4">
-          Oppolia has continued to provide dependable quality bathroom vanities to all of our clients.
-          We take pleasure in being one of the firms that work hard to guarantee that all of your
-          demands are addressed. When it comes to custom vanity makers, we are the ones to call.
-        </p>
-      </div>
-
-      <div className="px-4 sm:px-8 md:px-16 lg:px-24 pb-12 md:pb-24">
-        {faqs.map((faq, index) => {
-          const isOpen = openIndices.has(index)
-          return (
-            <div key={index} className="border-b border-gray-300">
-              <button
-                onClick={() => toggle(index)}
-                className="w-full flex items-center justify-between py-4 md:py-6 text-left"
-              >
-                <span className="text-[#1f2440] font-medium text-[15px] sm:text-[16px] md:text-[18px] pr-4">
-                  {faq.question}
-                </span>
-                <span className="shrink-0 w-6 h-6 rounded-full border border-[#1f2440] flex items-center justify-center text-[#1f2440] text-xs">
-                  {isOpen ? <FaMinus /> : <FaPlus />}
-                </span>
-              </button>
-
-              <AnimatePresence initial={false}>
-                {isOpen && (
-                  <motion.div
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: "auto", opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.25, ease: "easeInOut" }}
-                    className="overflow-hidden"
-                  >
-                    <p className="text-gray-500 text-[14px] sm:text-[15px] md:text-[16px] leading-relaxed pb-6 pr-4 sm:pr-8 md:pr-10">
-                      {faq.answer}
-                    </p>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-          )
-        })}
-      </div>
+      <FAQ
+        faqs={bathroomFaqs}
+        title="Frequently Asked Questions."
+        subtitle="FAQs"
+        description="Need something cleared up? Here are our most frequently asked questions."
+      />
       <CallToAction />
       <Footer />
     </div>

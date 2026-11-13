@@ -15,13 +15,19 @@ const navLinks = [
     href: "/products",
     children: [
       { label: "Custom Kitchen", href: "/custom-kitchen" },
+      { label: "Wardrobe", href: "/wardrobe" },
       { label: "Bedroom", href: "/bedroom" },
-      { label: "Bathroom", href: "/bathroom" },
       { label: "Dining", href: "/dining" },
-
-      { label: "Doors & Windows", href: "/door-windows" },
+      { label: "Living Room Cabinet", href: "/living-room" },
+      { label: "TV Cabinet", href: "/tv-cabinet" },
+      { label: "Display Cabinet", href: "/display-cabinet" },
+      { label: "Study Cabinet", href: "/study-cabinet" },
+      { label: "Side Cabinet", href: "/side-cabinet" },
+      { label: "Wall Panel", href: "/wall-panel" },
+      { label: "Bathroom", href: "/bathroom" },
+      // { label: "Doors & Windows", href: "/door-windows" }, 
       { label: "Whole House Solution", href: "/whole-house-solution" },
-      { label: "Furniture", href: "/furniture" },
+      // { label: "Furniture", href: "/furniture" },
     ],
   },
   {
@@ -71,12 +77,10 @@ function Header() {
     };
   }, [isMenuOpen]);
 
-  // Reset mobile accordion state whenever the mobile menu closes
-  useEffect(() => {
-    if (!isMenuOpen) {
-      setOpenMobileAccordion(null)
-    }
-  }, [isMenuOpen]);
+  const closeMobileMenu = () => {
+    setIsMenuOpen(false);
+    setOpenMobileAccordion(null);
+  };
 
   return (
     <div className='w-full sticky top-0 z-50 bg-gradient-to-r from-[#2a2a2a]/5 via-[#2a2a2a]/5 to-[#4a4a4a]/5 backdrop-blur-sm flex justify-between items-center px-4 md:px-14 py-3 md:py-4 shadow-lg'>
@@ -139,24 +143,80 @@ function Header() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -8 }}
                     transition={{ duration: 0.18, ease: "easeOut" }}
-                    className='absolute top-full right-0 mt-3 w-64 bg-white rounded-md shadow-xl overflow-hidden py-2 z-[60]'
+                    className={`absolute top-full mt-3 bg-white rounded-xl shadow-2xl border border-gray-100 z-[60] ${link.children.length > 6
+                      ? "right-[-120px] lg:right-[-80px] w-[520px] p-4"
+                      : "right-0 w-60 py-2"
+                      }`}
                     onMouseEnter={() => openNow(link.label)}
                     onMouseLeave={() => scheduleClose(link.label)}
                   >
-                    {link.children.map((child) => (
-                      <Link
-                        key={child.label}
-                        href={child.href}
-                        className='flex items-center justify-between px-5 py-3 text-[#1f1f1f] hover:bg-gray-50 hover:text-[#E1AD56] transition-colors text-[15px]'
-                        onClick={() => {
-                          cancelClose()
-                          setOpenDropdown(null)
-                        }}
-                      >
-                        {child.label}
-                        <FaChevronRight className='text-xs opacity-60' />
-                      </Link>
-                    ))}
+                    {link.children.length > 6 ? (
+                      <div>
+                        {/* Header banner */}
+                        <div className='flex items-center justify-between pb-3 mb-2 border-b border-gray-100 px-1'>
+                          <div>
+                            <p className='text-[10px] font-thin tracking-wider text-gray-500 uppercase'>Our Collections</p>
+                            <p className='text-[13px] text-[#2a2a2a] font-serif font-medium'>Explore Custom Spaces</p>
+                          </div>
+                          <span className='text-[11px] font-medium text-[#E1AD56] bg-[#E1AD56]/10 px-2.5 py-0.5 rounded-full'>
+                            {link.children.length} Products
+                          </span>
+                        </div>
+
+                        {/* 2-column grid */}
+                        <div className='grid grid-cols-2 gap-x-2.5 gap-y-0.5'>
+                          {link.children.map((child) => (
+                            <Link
+                              key={child.label}
+                              href={child.href}
+                              className='group flex items-center justify-between px-3 py-2 rounded-lg text-[#2a2a2a] hover:bg-[#F7F4EF] hover:text-[#E1AD56] transition-all duration-150 text-[13.5px] font-medium'
+                              onClick={() => {
+                                cancelClose()
+                                setOpenDropdown(null)
+                              }}
+                            >
+                              <div className='flex items-center gap-2 min-w-0'>
+                                <span className='w-1.5 h-1.5 rounded-full bg-gray-300 group-hover:bg-[#E1AD56] transition-colors shrink-0' />
+                                <span className='truncate'>{child.label}</span>
+                              </div>
+                              <FaChevronRight className='text-[9px] text-gray-300 group-hover:text-[#E1AD56] group-hover:translate-x-0.5 transition-all shrink-0 ml-1' />
+                            </Link>
+                          ))}
+                        </div>
+
+                        {/* Footer shortcut */}
+                        <div className='mt-3 pt-2.5 px-3 border-t border-gray-100 flex items-center justify-between bg-[#F7F4EF]/70 -mx-4 -mb-4 p-3 rounded-b-xl'>
+                          <span className='text-[12px] font-light text-gray-500'>Looking for a tailored complete home package?</span>
+                          <Link
+                            href="/whole-house-solution"
+                            className='text-[12px] font-thin text-[#E1AD56] hover:underline flex items-center gap-1 shrink-0'
+                            onClick={() => {
+                              cancelClose()
+                              setOpenDropdown(null)
+                            }}
+                          >
+                            Whole House Solution &rarr;
+                          </Link>
+                        </div>
+                      </div>
+                    ) : (
+                      <div className='py-1'>
+                        {link.children.map((child) => (
+                          <Link
+                            key={child.label}
+                            href={child.href}
+                            className='group flex items-center justify-between px-5 py-3 text-[#1f1f1f] hover:bg-[#F7F4EF] hover:text-[#E1AD56] transition-colors text-[14px] font-medium'
+                            onClick={() => {
+                              cancelClose()
+                              setOpenDropdown(null)
+                            }}
+                          >
+                            <span>{child.label}</span>
+                            <FaChevronRight className='text-[10px] text-gray-400 group-hover:text-[#E1AD56] group-hover:translate-x-0.5 transition-all' />
+                          </Link>
+                        ))}
+                      </div>
+                    )}
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -197,7 +257,7 @@ function Header() {
             <button
               type="button"
               className='absolute top-5 right-5 text-white text-3xl p-2'
-              onClick={() => setIsMenuOpen(false)}
+              onClick={closeMobileMenu}
               aria-label="Close menu"
             >
               <FaTimes />
@@ -229,7 +289,7 @@ function Header() {
                   <Link
                     href={link.href}
                     className='text-white text-2xl font-serif hover:text-[#E1AD56] cursor-pointer transition-colors w-full text-center py-2'
-                    onClick={() => setIsMenuOpen(false)}
+                    onClick={closeMobileMenu}
                   >
                     {link.label}
                   </Link>
@@ -242,25 +302,42 @@ function Header() {
                       animate={{ opacity: 1, height: "auto" }}
                       exit={{ opacity: 0, height: 0 }}
                       transition={{ duration: 0.2, ease: "easeInOut" }}
-                      className='flex flex-col items-center gap-3 mt-4 overflow-hidden w-full'
+                      className='w-full mt-3 overflow-hidden'
                     >
-                      {link.children.map((child) => (
-                        <Link
-                          key={child.label}
-                          href={child.href}
-                          className='text-gray-300 text-lg font-sans hover:text-[#E1AD56] transition-colors'
-                          onClick={() => setIsMenuOpen(false)}
-                        >
-                          {child.label}
-                        </Link>
-                      ))}
+                      {link.children.length > 6 ? (
+                        <div className='grid grid-cols-2 gap-2 max-w-sm mx-auto w-full'>
+                          {link.children.map((child) => (
+                            <Link
+                              key={child.label}
+                              href={child.href}
+                              className='bg-white/5 hover:bg-[#E1AD56]/20 border border-white/10 hover:border-[#E1AD56]/40 text-gray-200 hover:text-white text-[13px] font-sans rounded-lg py-2.5 px-3 text-center transition-all truncate block'
+                              onClick={closeMobileMenu}
+                            >
+                              {child.label}
+                            </Link>
+                          ))}
+                        </div>
+                      ) : (
+                        <div className='flex flex-col items-center gap-3'>
+                          {link.children.map((child) => (
+                            <Link
+                              key={child.label}
+                              href={child.href}
+                              className='text-gray-300 text-lg font-sans hover:text-[#E1AD56] transition-colors'
+                              onClick={closeMobileMenu}
+                            >
+                              {child.label}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
                     </motion.div>
                   )}
                 </AnimatePresence>
               </div>
             ))}
 
-            <Link href="/contact" onClick={() => setIsMenuOpen(false)}>
+            <Link href="/contact" onClick={closeMobileMenu}>
               <button
                 type="button"
                 className='bg-[#E1AD56] text-white px-8 py-3 rounded text-xl hover:bg-[#c9963d] transition-colors mt-4'

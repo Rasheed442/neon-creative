@@ -115,7 +115,59 @@ import din2 from "../assets/Images/Dining/din2.png"
 import din3 from "../assets/Images/Dining/din3.png"
 import din4 from "../assets/Images/Dining/din4.png"
 
+// DISPLAY CABINET
+import displayCabinetBG from "../assets/Images/DisplayCabinet/displayCabinetBG.png"
+import cab1 from "../assets/Images/DisplayCabinet/cab1.png"
+import cab2 from "../assets/Images/DisplayCabinet/cab2.png"
+import cab3 from "../assets/Images/DisplayCabinet/cab3.png"
+import cab4 from "../assets/Images/DisplayCabinet/cab4.png"
+import cab5 from "../assets/Images/DisplayCabinet/cab5.png"
+import cab6 from "../assets/Images/DisplayCabinet/cab6.png"
 
+// LIVING ROOM
+import livingroombg from "../assets/Images/LivingRoom/livingroombg.png"
+import living1 from "../assets/Images/LivingRoom/living1.png"
+import living2 from "../assets/Images/LivingRoom/living2.png"
+import living3 from "../assets/Images/LivingRoom/living3.png"
+import living4 from "../assets/Images/LivingRoom/living4.png"
+import living5 from "../assets/Images/LivingRoom/living5.png"
+import living6 from "../assets/Images/LivingRoom/living6.png"
+
+// SIDE CABINET
+import sidecabinetbg from "../assets/Images/Sidecabinet/sidecabinetbg.png"
+import sidecab1 from "../assets/Images/Sidecabinet/sidecab1.png"
+
+// STUDY CABINET
+import studyCabinetbg from "../assets/Images/StudyCabinet/studyCabinetbg.png"
+import studycab1 from "../assets/Images/StudyCabinet/studycab1.png"
+import studycab2 from "../assets/Images/StudyCabinet/studycab2.png"
+import studycab3 from "../assets/Images/StudyCabinet/studycab3.png"
+import studycab4 from "../assets/Images/StudyCabinet/studycab4.png"
+
+// TV CABINET
+import Tvcabinetbg from "../assets/Images/TVCabinet/Tvcabinetbg.png"
+import tvcab1 from "../assets/Images/TVCabinet/tvcab1.png"
+import tvcab2 from "../assets/Images/TVCabinet/tvcab2.png"
+import tvcab3 from "../assets/Images/TVCabinet/tvcab3.png"
+import tvcab4 from "../assets/Images/TVCabinet/tvcab4.png"
+import tvcab5 from "../assets/Images/TVCabinet/tvcab5.png"
+import tvcab6 from "../assets/Images/TVCabinet/tvcab6.png"
+
+// WALL PANEL
+import wallpanelbg from "../assets/Images/WallPanel/wallpanelbg.png"
+import wallpanel1 from "../assets/Images/WallPanel/wallpanel1.png"
+import wallpanel2 from "../assets/Images/WallPanel/wallpanel2.png"
+import wallpane3 from "../assets/Images/WallPanel/wallpane3.png"
+import wallpanel4 from "../assets/Images/WallPanel/wallpanel4.png"
+
+// WARDROBE
+import wardrobebg from "../assets/Images/Wardrobe/wardrobebg.png"
+import wardrobe1 from "../assets/Images/Wardrobe/wardrobe1.png"
+import wardrobe2 from "../assets/Images/Wardrobe/wardrobe2.png"
+import wardrobe3 from "../assets/Images/Wardrobe/wardrobe3.png"
+import wardrobe4 from "../assets/Images/Wardrobe/wardrobe4.png"
+import wardrobe5 from "../assets/Images/Wardrobe/wardrobe5.png"
+import wardrobe6 from "../assets/Images/Wardrobe/wardrobe6.png"
 
 export const ctbgImages = {
     ctbg,
@@ -144,12 +196,64 @@ export const bathimages = {
 };
 export const DiningBGimages = {
     DiningBG,
-    bath1,
-    bath2,
-    bath3,
-    bath4,
-    bath5,
-    bath6,
+    din1,
+    din2,
+    din3,
+    din4,
+};
+export const displayCabinetImages = {
+    displayCabinetBG,
+    cab1,
+    cab2,
+    cab3,
+    cab4,
+    cab5,
+    cab6,
+};
+export const livingRoomImages = {
+    livingroombg,
+    living1,
+    living2,
+    living3,
+    living4,
+    living5,
+    living6,
+};
+export const sideCabinetImages = {
+    sidecabinetbg,
+    sidecab1,
+};
+export const studyCabinetImages = {
+    studyCabinetbg,
+    studycab1,
+    studycab2,
+    studycab3,
+    studycab4,
+};
+export const tvCabinetImages = {
+    Tvcabinetbg,
+    tvcab1,
+    tvcab2,
+    tvcab3,
+    tvcab4,
+    tvcab5,
+    tvcab6,
+};
+export const wallPanelImages = {
+    wallpanelbg,
+    wallpanel1,
+    wallpanel2,
+    wallpane3,
+    wallpanel4,
+};
+export const wardrobeImages = {
+    wardrobebg,
+    wardrobe1,
+    wardrobe2,
+    wardrobe3,
+    wardrobe4,
+    wardrobe5,
+    wardrobe6,
 };
 export const dwimages = {
     dwbg,
